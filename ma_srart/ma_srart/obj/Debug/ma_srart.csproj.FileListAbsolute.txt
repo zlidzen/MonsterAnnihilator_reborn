@@ -1,0 +1,16 @@
+E:\My_proj\MonsterAnnihilator\ma_srart\ma_srart\bin\Debug\ma_srart.exe.config
+E:\My_proj\MonsterAnnihilator\ma_srart\ma_srart\bin\Debug\ma_srart.exe
+E:\My_proj\MonsterAnnihilator\ma_srart\ma_srart\bin\Debug\ma_srart.pdb
+E:\My_proj\MonsterAnnihilator\ma_srart\ma_srart\obj\Debug\ma_srart.csprojResolveAssemblyReference.cache
+E:\My_proj\MonsterAnnihilator\ma_srart\ma_srart\obj\Debug\MainWindow.g.cs
+E:\My_proj\MonsterAnnihilator\ma_srart\ma_srart\obj\Debug\App.g.cs
+E:\My_proj\MonsterAnnihilator\ma_srart\ma_srart\obj\Debug\ma_srart_MarkupCompile.cache
+E:\My_proj\MonsterAnnihilator\ma_srart\ma_srart\obj\Debug\ma_srart_MarkupCompile.lref
+E:\My_proj\MonsterAnnihilator\ma_srart\ma_srart\obj\Debug\MainWindow.baml
+E:\My_proj\MonsterAnnihilator\ma_srart\ma_srart\obj\Debug\ma_srart.g.resources
+E:\My_proj\MonsterAnnihilator\ma_srart\ma_srart\obj\Debug\ma_srart.Properties.Resources.resources
+E:\My_proj\MonsterAnnihilator\ma_srart\ma_srart\obj\Debug\ma_srart.csproj.GenerateResource.Cache
+E:\My_proj\MonsterAnnihilator\ma_srart\ma_srart\obj\Debug\ma_srart.exe
+E:\My_proj\MonsterAnnihilator\ma_srart\ma_srart\obj\Debug\ma_srart.pdb
+E:\My_proj\MonsterAnnihilator\ma_srart\ma_srart\obj\Debug\Window1.g.cs
+E:\My_proj\MonsterAnnihilator\ma_srart\ma_srart\obj\Debug\Window1.baml
