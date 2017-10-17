@@ -7,11 +7,11 @@
 
 - What kind of f... is this?
   - At first you should reminde games like "Heroes M&M", "Disciples", "Newerwinter" and "Falluot".
-  - One of interesting part this games was "fighting".
-  - There was role-playing game.
-  - There was step-by-step (in HMM, Disciples, Fallout).
-  - There was on D&D rules (Newerwinter).
-  - There was micromanaged target (Falluot).
+    - One of interesting part this games was "fighting".
+    - There was role-playing game.
+    - There was step-by-step (in HMM, Disciples, Fallout).
+    - There was on D&D rules (Newerwinter).
+    - There was micromanaged target (Falluot).
   - It was fun there!
 
 ### Ok! Let's mix it!
