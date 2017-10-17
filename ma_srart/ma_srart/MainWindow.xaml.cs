@@ -24,7 +24,8 @@ namespace ma_srart
             strtList.Add(btnHelp);
             strtList.Add(btnScores);
             strtList.Add(btnQuit);
-            ShowBtns(strtList);
+            ShowControl(strtList);
+            ShowPanel(wpStart);
         }
 
         private void BtnQuit_Click(object sender, RoutedEventArgs e)
@@ -45,13 +46,14 @@ namespace ma_srart
             strtList.Add(btnGame);
             strtList.Add(btnAbout);            
             strtList.Add(btnScores);           
-            ShowBtns(strtList, false);
+            ShowControl(strtList, false);
+            ShowPanel(wpStart, false);
 
             strtList.Clear();
             strtList.Add(btnNewGame);
             strtList.Add(btnLoadGame);
             strtList.Add(btnBack);
-            ShowBtns(strtList);
+            ShowControl(strtList);
 
             btnQuit.IsEnabled = true;
             Title = Properties.Resources.MainTitle + Properties.Resources.GameTitle;
@@ -67,7 +69,7 @@ namespace ma_srart
             MessageBox.Show("About!", Properties.Resources.MainTitle + Properties.Resources.AboutTitle);
         }
 
-        private static void ShowBtns(List<Control> arrBtn, bool ok = true) {
+        private static void ShowControl(List<Control> arrBtn, bool ok = true) {
             Double startA = ok ? 0.0 : 1.0;
             Double endA = ok ? 1.0 : 0.0;
            
@@ -76,11 +78,24 @@ namespace ma_srart
             dblAnim.To = endA;
             dblAnim.Duration = new Duration(TimeSpan.FromMilliseconds(500));
 
-            foreach (Button item in arrBtn)
+            foreach (Control item in arrBtn)
             {
                 item.Visibility = ok ? Visibility.Visible : Visibility.Hidden;
                 item.BeginAnimation(OpacityProperty, dblAnim);                
             }
+        }
+
+        private static void ShowPanel(Panel pan, bool ok = true) {
+            Double startA = ok ? 0.0 : 1.0;
+            Double endA = ok ? 1.0 : 0.0;
+
+            DoubleAnimation dblAnim = new DoubleAnimation();
+            dblAnim.From = startA;
+            dblAnim.To = endA;
+            dblAnim.Duration = new Duration(TimeSpan.FromMilliseconds(500));
+                      
+            pan.Visibility = ok ? Visibility.Visible : Visibility.Hidden;
+            pan.BeginAnimation(OpacityProperty, dblAnim);            
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
@@ -94,32 +109,34 @@ namespace ma_srart
                     strtList.Add(btnNewGame);
                     strtList.Add(btnLoadGame);
                     strtList.Add(btnBack);
-                    ShowBtns(strtList);
+                    ShowControl(strtList);
+                    ShowPanel(wpStart);
 
                     strtList.Clear();
                     strtList.Add(btnGame);
                     strtList.Add(btnAbout);
                     strtList.Add(btnScores);
-                    ShowBtns(strtList, true);
+                    ShowControl(strtList);
                     break;
 
                 case 1:
                     strtList.Add(btnMake);
-                    ShowBtns(strtList, false);
+                    ShowControl(strtList, false);
+                    ShowPanel(wpNewHero, false);
 
                     strtList.Clear();
                     strtList.Add(btnNewGame);
                     strtList.Add(btnLoadGame);                    
-                    ShowBtns(strtList);
+                    ShowControl(strtList);
                     break;
                 case 2:
                     strtList.Add(btnLoad);
-                    ShowBtns(strtList, false);
+                    ShowControl(strtList, false);
 
                     strtList.Clear();
                     strtList.Add(btnNewGame);
                     strtList.Add(btnLoadGame);                    
-                    ShowBtns(strtList);
+                    ShowControl(strtList);
                     break;
             }
 
@@ -137,25 +154,12 @@ namespace ma_srart
             List<Control> strtList = new List<Control>();
             strtList.Add(btnNewGame);
             strtList.Add(btnLoadGame);            
-            ShowBtns(strtList, false);
+            ShowControl(strtList, false);
 
             strtList.Clear();
-            strtList.Add(btnMake);
-            strtList.Add(heroName);
-            /* need pannel!!!!
-            strtList.Add(tbxPassword);
-            strtList.Add(lblHeroSpec);
-            strtList.Add(cbxHeroSpec);
-                        
-            strtList.Add(lblHeroLvl);
-            strtList.Add(lblHeroHealth);
-            strtList.Add(lblHeroPower);
-            strtList.Add(lblHeroResist);
-            strtList.Add(lblHeroAttack);
-            strtList.Add(lblHeroDefence);
-            strtList.Add(lblHeroExperience);
-            */
-            ShowBtns(strtList);
+            strtList.Add(btnMake);            
+            ShowControl(strtList);
+            ShowPanel(wpNewHero);
 
             btnQuit.IsEnabled = true;
             Title = Properties.Resources.MainTitle + Properties.Resources.MakeHeroTitle;
@@ -171,11 +175,11 @@ namespace ma_srart
             List<Control> strtList = new List<Control>();
             strtList.Add(btnNewGame);
             strtList.Add(btnLoadGame);
-            ShowBtns(strtList, false);
+            ShowControl(strtList, false);
 
             strtList.Clear();
             strtList.Add(btnLoad);
-            ShowBtns(strtList);
+            ShowControl(strtList);
 
             btnQuit.IsEnabled = true;
             Title = Properties.Resources.MainTitle + Properties.Resources.LoadHeroTitle;

@@ -27,45 +27,50 @@
         <Style x:Key="lItemMakeHeroStyle">
             <Setter Property="Control.Opacity" Value ="0.0"/>
             <Setter Property="Control.Visibility" Value="Visible"/>
+            <Setter Property="Control.Background" Value="#99938D8D"/>
         </Style>   
             
     </Window.Resources>
     <Grid>
-        <Button x:Name ="btnLoad" Content="Load" HorizontalAlignment="Left" Margin="247,90,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}"/>
-        <Button x:Name ="btnMake" Content="Make" HorizontalAlignment="Left" Margin="247,90,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}"/>
+        <Button x:Name ="btnLoad" Content="Load" HorizontalAlignment="Left" Margin="265,80,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}"/>
+        <Button x:Name ="btnMake" Content="Make" HorizontalAlignment="Left" Margin="265,80,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}"/>
 
-        <Button x:Name ="btnNewGame" Content="New" HorizontalAlignment="Left" Margin="247,40,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnNewGame_Click"/>
-        <Button x:Name ="btnLoadGame" Content="Load" HorizontalAlignment="Left" Margin="247,90,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="btnLoadGame_Click"/>
-        <Button x:Name ="btnBack" Content="Back" HorizontalAlignment="Left" Margin="247,190,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnBack_Click" />
+        <Button x:Name ="btnNewGame" Content="New" HorizontalAlignment="Left" Margin="265,30,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnNewGame_Click"/>
+        <Button x:Name ="btnLoadGame" Content="Load" HorizontalAlignment="Left" Margin="265,80,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="btnLoadGame_Click"/>
+        <Button x:Name ="btnBack" Content="Back" HorizontalAlignment="Left" Margin="265,180,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnBack_Click" />
 
-        <Button x:Name ="btnGame" Content="Game" HorizontalAlignment="Left" Margin="247,40,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnGame_Click"/>
-        <Button x:Name ="btnAbout" Content="About" HorizontalAlignment="Left" Margin="247,90,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnAbout_Click"/>
-        <Button x:Name ="btnHelp" Content="Help" HorizontalAlignment="Left" Margin="247,140,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnHelp_Click"/>
-        <Button x:Name ="btnScores" Content="Scores" HorizontalAlignment="Left" Margin="247,190,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnScores_Click"/>
+        <Button x:Name ="btnGame" Content="Game" HorizontalAlignment="Left" Margin="265,30,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnGame_Click"/>
+        <Button x:Name ="btnAbout" Content="About" HorizontalAlignment="Left" Margin="265,80,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnAbout_Click"/>
+        <Button x:Name ="btnHelp" Content="Help" HorizontalAlignment="Left" Margin="265,130,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnHelp_Click"/>
+        <Button x:Name ="btnScores" Content="Scores" HorizontalAlignment="Left" Margin="265,180,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnScores_Click"/>
 
-        <Button x:Name ="btnQuit" Content="Quit" HorizontalAlignment="Left" Margin="247,240,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnQuit_Click"/>
+        <Button x:Name ="btnQuit" Content="Quit" HorizontalAlignment="Left" Margin="265,230,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnQuit_Click"/>
         <Label Content ="2017" HorizontalAlignment="Left" Margin="157,289,0,0" VerticalAlignment="Top"/>
-        
-        <Label Content="Cool name:" HorizontalAlignment="Left" Margin="20,21,0,0" Height="23" Width="71" VerticalAlignment="Top" Style="{StaticResource lItemMakeHeroStyle}"/>
-        <TextBox x:Name ="heroName" HorizontalAlignment="Left" Margin="96,21,0,0" Height="23" Width="139" VerticalAlignment="Top" Text="Enter name" Style="{StaticResource lItemMakeHeroStyle}"/>
+        <WrapPanel x:Name="wpNewHero" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
+            <Label x:Name="lblHeroName" Content="Cool name:" HorizontalAlignment="Left" Margin="8,8,0,6" Height="23" Width="71" VerticalAlignment="Top"/>
+            <TextBox x:Name ="tbxHeroName" HorizontalAlignment="Left" Margin="8,8,0,0" Height="23" Width="139" VerticalAlignment="Top" Text="Enter name"/>
                   
-        <Label Content="Password:" HorizontalAlignment="Left" Margin="20,49,0,0" Height="23" Width="71" VerticalAlignment="Top" Style="{StaticResource lItemMakeHeroStyle}"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="96,52,0,0" Height="23" Width="139" VerticalAlignment="Top" Style="{StaticResource lItemMakeHeroStyle}"/>
+            <Label x:Name="lblPass" Content="Password:" HorizontalAlignment="Left" Margin="8,0,0,6" Height="23" Width="71" VerticalAlignment="Top"/>
+            <PasswordBox x:Name="tbxPass" HorizontalAlignment="Left" Margin="8,0,0,0" Height="23" Width="139" VerticalAlignment="Top"/>
         
-        <Label Content="Specialty:" HorizontalAlignment="Left" Margin="20,77,0,0" VerticalAlignment="Top" Height="23" Width="71" Style="{StaticResource lItemMakeHeroStyle}"/>
-        <ComboBox HorizontalAlignment="Left" Margin="96,77,0,0" Height="23" Width="139" VerticalAlignment="Top" Style="{StaticResource lItemMakeHeroStyle}">
-            <ComboBoxItem Content="Berserker"/>
-            <ComboBoxItem Content="Guardian"/>
-        </ComboBox>            
+            <Label x:Name="lblSpec" Content="Specialty:" HorizontalAlignment="Left" Margin="8,0,0,0" VerticalAlignment="Top" Height="23" Width="71"/>
+            <ComboBox x:Name="cbxSpec" HorizontalAlignment="Left" Margin="8,0,0,0" Height="25" Width="140" VerticalAlignment="Top">
+                <ComboBoxItem Content="Berserker"/>
+                <ComboBoxItem Content="Guardian"/>
+            </ComboBox>
+
+            <Label x:Name="lblHeroLvl" Content="Level: 0" HorizontalAlignment="Left" Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
+            <Label x:Name="lblHeroHelth" Content="Health: 0/0" HorizontalAlignment="Left" Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
+            <Label x:Name="lblHeroPower" Content="Power: 0" HorizontalAlignment="Left"  Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
+            <Label x:Name="lblHeroResist" Content="Resist: 0" HorizontalAlignment="Left"  Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
+            <Label x:Name="lblHeroAttack" Content="Attack: 0" HorizontalAlignment="Left"  Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
+            <Label x:Name="lblHeroDefence" Content="Defence: 0" HorizontalAlignment="Left"  Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
+            <Label x:Name="lblHeroExp" Content="Experience: 0" HorizontalAlignment="Left"  Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
+        </WrapPanel>
+        <WrapPanel x:Name="wpStart" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
+            <Label Content="START" Margin="85,85,0,0" VerticalAlignment="Top" Width="83"/>   
+        </WrapPanel>
         
-        <Label Content="Level: 0" HorizontalAlignment="Left" Margin="96,102,0,0" VerticalAlignment="Top" Width="83" Style="{StaticResource lItemMakeHeroStyle}"/>
-        <Label Content="Health: 0/0" HorizontalAlignment="Left" Margin="96,128,0,0" VerticalAlignment="Top" Width="83" Style="{StaticResource lItemMakeHeroStyle}"/>
-        <Label Content="Power: 0" HorizontalAlignment="Left" Margin="96,154,0,0" VerticalAlignment="Top" Width="83" Style="{StaticResource lItemMakeHeroStyle}"/>
-        <Label Content="Resist: 0" HorizontalAlignment="Left" Margin="96,180,0,0" VerticalAlignment="Top" Width="83" Style="{StaticResource lItemMakeHeroStyle}"/>
-        <Label Content="Attack: 0" HorizontalAlignment="Left" Margin="96,206,0,0" VerticalAlignment="Top" Width="83" Style="{StaticResource lItemMakeHeroStyle}"/>
-        <Label Content="Defence: 0" HorizontalAlignment="Left" Margin="96,232,0,0" VerticalAlignment="Top" Width="83" Style="{StaticResource lItemMakeHeroStyle}"/>
-        <Label Content="Experience: 0" HorizontalAlignment="Left" Margin="96,258,0,0" VerticalAlignment="Top" Width="83" Style="{StaticResource lItemMakeHeroStyle}"/>
-            
         <Label x:Name="lblTest" Content="Label" HorizontalAlignment="Left" Margin="311,289,0,0" VerticalAlignment="Top"/>    
     </Grid>
 </Window>
