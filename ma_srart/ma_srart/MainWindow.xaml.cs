@@ -18,7 +18,7 @@ namespace ma_srart
         {
             InitializeComponent();
             this.Title = Properties.Resources.MainTitle + Properties.Resources.StartTitle;
-            List<Button> strtList = new List<Button>();
+            List<Control> strtList = new List<Control>();
             strtList.Add(btnGame);
             strtList.Add(btnAbout);
             strtList.Add(btnHelp);
@@ -41,7 +41,7 @@ namespace ma_srart
         {
             btnQuit.IsEnabled = false;            
 
-            List<Button> strtList = new List<Button>();
+            List<Control> strtList = new List<Control>();
             strtList.Add(btnGame);
             strtList.Add(btnAbout);            
             strtList.Add(btnScores);           
@@ -67,9 +67,9 @@ namespace ma_srart
             MessageBox.Show("About!", Properties.Resources.MainTitle + Properties.Resources.AboutTitle);
         }
 
-        private static void ShowBtns(List<Button> arrBtn, bool ok = true) {
+        private static void ShowBtns(List<Control> arrBtn, bool ok = true) {
             Double startA = ok ? 0.0 : 1.0;
-            Double endA = ok ? 1.0: 0.0;
+            Double endA = ok ? 1.0 : 0.0;
            
             DoubleAnimation dblAnim = new DoubleAnimation();
             dblAnim.From = startA;
@@ -87,7 +87,7 @@ namespace ma_srart
         {
             btnQuit.IsEnabled = false;
 
-            List<Button> strtList = new List<Button>();
+            List<Control> strtList = new List<Control>();
 
             switch (backStep) {
                 case 0:
@@ -134,13 +134,27 @@ namespace ma_srart
         {
             btnQuit.IsEnabled = false;
 
-            List<Button> strtList = new List<Button>();
+            List<Control> strtList = new List<Control>();
             strtList.Add(btnNewGame);
             strtList.Add(btnLoadGame);            
             ShowBtns(strtList, false);
 
             strtList.Clear();
-            strtList.Add(btnMake);            
+            strtList.Add(btnMake);
+            strtList.Add(heroName);
+            /* need pannel!!!!
+            strtList.Add(tbxPassword);
+            strtList.Add(lblHeroSpec);
+            strtList.Add(cbxHeroSpec);
+                        
+            strtList.Add(lblHeroLvl);
+            strtList.Add(lblHeroHealth);
+            strtList.Add(lblHeroPower);
+            strtList.Add(lblHeroResist);
+            strtList.Add(lblHeroAttack);
+            strtList.Add(lblHeroDefence);
+            strtList.Add(lblHeroExperience);
+            */
             ShowBtns(strtList);
 
             btnQuit.IsEnabled = true;
@@ -154,7 +168,7 @@ namespace ma_srart
         {
             btnQuit.IsEnabled = false;
 
-            List<Button> strtList = new List<Button>();
+            List<Control> strtList = new List<Control>();
             strtList.Add(btnNewGame);
             strtList.Add(btnLoadGame);
             ShowBtns(strtList, false);
