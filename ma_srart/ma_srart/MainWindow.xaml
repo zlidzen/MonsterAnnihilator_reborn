@@ -68,9 +68,28 @@
             <Label x:Name="lblHeroExp" Content="Experience: 0" HorizontalAlignment="Left"  Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
         </WrapPanel>
         <WrapPanel x:Name="wpStart" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
-            <Label Content="START" Margin="85,85,0,0" VerticalAlignment="Top" Width="83"/>   
+            <Label x:Name="lblWelcome" Margin="85,85,0,0" VerticalAlignment="Top" Width="83">
+                Welcome to the best game you've ever played!
+                18+
+                Be careful:
+                - you can't unsee it
+                - has side effects
+                - prohibited for pregnant, animal, pregnant animal
+            </Label>   
         </WrapPanel>
-        
-        <Label x:Name="lblTest" Content="Label" HorizontalAlignment="Left" Margin="311,289,0,0" VerticalAlignment="Top"/>    
+        <WrapPanel x:Name="wpAbout" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
+            <Label x:Name="lblAbout" Margin="85,85,0,0" VerticalAlignment="Top" Width="83">
+                copyright 2017
+            </Label>   
+        </WrapPanel>
+        <WrapPanel x:Name="wpHelp" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
+            <Label x:Name="lblHelp" Margin="85,85,0,0" VerticalAlignment="Top" Width="83">
+                For start play, please click Game.
+                If you played earlier, click Load.
+                Otherwise click New.
+            </Label>   
+        </WrapPanel>
+
+        <Label x:Name="lblTest" HorizontalAlignment="Left" Margin="311,289,0,0" VerticalAlignment="Top"/>    
     </Grid>
 </Window>
