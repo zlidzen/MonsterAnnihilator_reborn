@@ -48,8 +48,8 @@
         <Label Content ="2017" HorizontalAlignment="Left" Margin="157,289,0,0" VerticalAlignment="Top"/>
         <WrapPanel x:Name="wpNewHero" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
             <Label x:Name="lblHeroName" Content="Cool name:" HorizontalAlignment="Left" Margin="8,8,0,6" Height="23" Width="71" VerticalAlignment="Top"/>
-            <TextBox x:Name ="tbxHeroName" HorizontalAlignment="Left" Margin="8,8,0,0" Height="23" Width="139" VerticalAlignment="Top" Text="Enter name"/>
-                  
+            <TextBox x:Name ="tbxHeroName" HorizontalAlignment="Left" Margin="8,8,0,0" Height="23" Width="139" VerticalAlignment="Top"/>
+
             <Label x:Name="lblPass" Content="Password:" HorizontalAlignment="Left" Margin="8,0,0,6" Height="23" Width="71" VerticalAlignment="Top"/>
             <PasswordBox x:Name="tbxPass" HorizontalAlignment="Left" Margin="8,0,0,0" Height="23" Width="139" VerticalAlignment="Top"/>
         
@@ -68,14 +68,14 @@
             <Label x:Name="lblHeroExp" Content="Experience: 0" HorizontalAlignment="Left"  Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
         </WrapPanel>
         <WrapPanel x:Name="wpStart" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
-            <Label x:Name="lblWelcome" Margin="85,85,0,0" VerticalAlignment="Top" Width="83">
+            <TextBlock TextWrapping="Wrap" Margin="0,60,0,33" Padding="5,10,10,10" TextAlignment="Justify" Width="252">
                 Welcome to the best game you've ever played!
-                18+
-                Be careful:
-                - you can't unsee it
-                - has side effects
-                - prohibited for pregnant, animal, pregnant animal
-            </Label>   
+                <LineBreak/>18+
+                <LineBreak/>Be careful:
+                <LineBreak/>- you can't unsee it
+                <LineBreak/>- has side effects
+                <LineBreak/>- prohibited for pregnant, animal, pregnant animal
+            </TextBlock>
         </WrapPanel>
         <WrapPanel x:Name="wpAbout" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
             <Label x:Name="lblAbout" Margin="85,85,0,0" VerticalAlignment="Top" Width="83">
@@ -87,7 +87,8 @@
                 For start play, please click Game.
                 If you played earlier, click Load.
                 Otherwise click New.
-            </Label>   
+            </Label>
+            
         </WrapPanel>
 
         <Label x:Name="lblTest" HorizontalAlignment="Left" Margin="311,289,0,0" VerticalAlignment="Top"/>    
