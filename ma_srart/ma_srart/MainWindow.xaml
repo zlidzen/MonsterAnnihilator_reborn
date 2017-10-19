@@ -82,13 +82,12 @@
                 copyright 2017
             </Label>   
         </WrapPanel>
-        <WrapPanel x:Name="wpHelp" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
-            <Label x:Name="lblHelp" Margin="85,85,0,0" VerticalAlignment="Top" Width="83">
+        <WrapPanel x:Name="wpGame" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
+            <TextBlock TextWrapping="Wrap" Margin="0,60,0,33" Padding="5,10,10,10" TextAlignment="Justify" Width="252">
                 For start play, please click Game.
-                If you played earlier, click Load.
-                Otherwise click New.
-            </Label>
-            
+                <LineBreak/>If you played earlier, click Load.
+                <LineBreak/>Otherwise click New.
+            </TextBlock>
         </WrapPanel>
 
         <Label x:Name="lblTest" HorizontalAlignment="Left" Margin="311,289,0,0" VerticalAlignment="Top"/>    
