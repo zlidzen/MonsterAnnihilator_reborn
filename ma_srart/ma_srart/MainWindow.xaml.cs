@@ -54,6 +54,7 @@ namespace ma_srart
             strtList.Add(btnLoadGame);
             strtList.Add(btnBack);
             ShowControl(strtList);
+            ShowPanel(wpGame);
 
             btnQuit.IsEnabled = true;
             Title = Properties.Resources.MainTitle + Properties.Resources.GameTitle;
@@ -109,14 +110,15 @@ namespace ma_srart
                     strtList.Add(btnNewGame);
                     strtList.Add(btnLoadGame);
                     strtList.Add(btnBack);
-                    ShowControl(strtList);
-                    ShowPanel(wpStart);
+                    ShowControl(strtList, false);
+                    ShowPanel(wpGame, false);
 
                     strtList.Clear();
                     strtList.Add(btnGame);
                     strtList.Add(btnAbout);
                     strtList.Add(btnScores);
                     ShowControl(strtList);
+                    ShowPanel(wpStart);
                     break;
 
                 case 1:
@@ -128,6 +130,7 @@ namespace ma_srart
                     strtList.Add(btnNewGame);
                     strtList.Add(btnLoadGame);                    
                     ShowControl(strtList);
+                    ShowPanel(wpGame);
                     break;
                 case 2:
                     strtList.Add(btnLoad);
@@ -137,6 +140,7 @@ namespace ma_srart
                     strtList.Add(btnNewGame);
                     strtList.Add(btnLoadGame);                    
                     ShowControl(strtList);
+                    ShowPanel(wpGame);
                     break;
             }
 
@@ -155,6 +159,7 @@ namespace ma_srart
             strtList.Add(btnNewGame);
             strtList.Add(btnLoadGame);            
             ShowControl(strtList, false);
+            ShowPanel(wpGame, false);
 
             strtList.Clear();
             strtList.Add(btnMake);            
