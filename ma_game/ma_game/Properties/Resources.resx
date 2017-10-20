@@ -117,11 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutText" xml:space="preserve">
+    <value>Copyright 2017</value>
+  </data>
   <data name="AboutTitle" xml:space="preserve">
     <value>: About</value>
   </data>
+  <data name="GameText" xml:space="preserve">
+    <value>For start play, please click Game.
+If you played earlier, click Load.
+Otherwise click New.</value>
+  </data>
   <data name="GameTitle" xml:space="preserve">
     <value>: Game</value>
+  </data>
+  <data name="HelpText" xml:space="preserve">
+    <value>There will be Help</value>
   </data>
   <data name="HelpTitle" xml:space="preserve">
     <value>: Help</value>
@@ -135,8 +146,19 @@
   <data name="MakeHeroTitle" xml:space="preserve">
     <value>: Make</value>
   </data>
+  <data name="ScoresText" xml:space="preserve">
+    <value>There will be Scores</value>
+  </data>
   <data name="ScoresTitle" xml:space="preserve">
     <value>: Score</value>
+  </data>
+  <data name="StartText" xml:space="preserve">
+    <value>Welcome to the best game you've ever played!
+18+
+Be careful:
+- you can't unsee it
+- has side effects
+- prohibited for pregnant, animal, pregnant animal</value>
   </data>
   <data name="StartTitle" xml:space="preserve">
     <value>: Start</value>

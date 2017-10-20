@@ -61,6 +61,15 @@ namespace ma_game.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Copyright 2017.
+        /// </summary>
+        internal static string AboutText {
+            get {
+                return ResourceManager.GetString("AboutText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to : About.
         /// </summary>
         internal static string AboutTitle {
@@ -70,11 +79,31 @@ namespace ma_game.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to For start play, please click Game.
+        ///If you played earlier, click Load.
+        ///Otherwise click New..
+        /// </summary>
+        internal static string GameText {
+            get {
+                return ResourceManager.GetString("GameText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to : Game.
         /// </summary>
         internal static string GameTitle {
             get {
                 return ResourceManager.GetString("GameTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There will be Help.
+        /// </summary>
+        internal static string HelpText {
+            get {
+                return ResourceManager.GetString("HelpText", resourceCulture);
             }
         }
         
@@ -115,11 +144,34 @@ namespace ma_game.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There will be Scores.
+        /// </summary>
+        internal static string ScoresText {
+            get {
+                return ResourceManager.GetString("ScoresText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to : Score.
         /// </summary>
         internal static string ScoresTitle {
             get {
                 return ResourceManager.GetString("ScoresTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome to the best game you&apos;ve ever played!
+        ///18+
+        ///Be careful:
+        ///- you can&apos;t unsee it
+        ///- has side effects
+        ///- prohibited for pregnant, animal, pregnant animal.
+        /// </summary>
+        internal static string StartText {
+            get {
+                return ResourceManager.GetString("StartText", resourceCulture);
             }
         }
         

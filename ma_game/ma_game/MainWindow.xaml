@@ -28,6 +28,7 @@
             <Setter Property="Control.Opacity" Value ="0.0"/>
             <Setter Property="Control.Visibility" Value="Visible"/>
             <Setter Property="Control.Background" Value="#99938D8D"/>
+            <Setter Property="Control.IsEnabled" Value="True"/>
         </Style>
     </Window.Resources>
     <Grid>
@@ -57,7 +58,7 @@
                 <ComboBoxItem Content="Berserker"/>
                 <ComboBoxItem Content="Guardian"/>
             </ComboBox>
-
+            
             <Label x:Name="lblHeroLvl" Content="Level: 0" HorizontalAlignment="Left" Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
             <Label x:Name="lblHeroHelth" Content="Health: 0/0" HorizontalAlignment="Left" Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
             <Label x:Name="lblHeroPower" Content="Power: 0" HorizontalAlignment="Left"  Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
@@ -67,28 +68,11 @@
             <Label x:Name="lblHeroExp" Content="Experience: 0" HorizontalAlignment="Left"  Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
         </WrapPanel>
         <WrapPanel x:Name="wpStart" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
-            <TextBlock TextWrapping="Wrap" Margin="0,60,0,33" Padding="5,10,10,10" TextAlignment="Justify" Width="252">
-                Welcome to the best game you've ever played!
-                <LineBreak/>18+
-                <LineBreak/>Be careful:
-                <LineBreak/>- you can't unsee it
-                <LineBreak/>- has side effects
-                <LineBreak/>- prohibited for pregnant, animal, pregnant animal
-            </TextBlock>
+            <TextBlock x:Name="txbStart" TextWrapping="Wrap" Margin="0,60,0,33" Padding="5,10,10,10" TextAlignment="Center" Width="252" />
         </WrapPanel>
-        <WrapPanel x:Name="wpAbout" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
-            <Label x:Name="lblAbout" Margin="85,85,0,0" VerticalAlignment="Top" Width="83">
-                copyright 2017
-            </Label>
+        <WrapPanel x:Name="wpLoadHero" Margin="10,10,93,31" Style="{StaticResource lItemMakeHeroStyle}">
+            <ListBox x:Name="lbxListHero" Width="230" Height="260" Margin="10, 10, 10, 10" />
         </WrapPanel>
-        <WrapPanel x:Name="wpGame" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
-            <TextBlock TextWrapping="Wrap" Margin="0,60,0,33" Padding="5,10,10,10" TextAlignment="Justify" Width="252">
-                For start play, please click Game.
-                <LineBreak/>If you played earlier, click Load.
-                <LineBreak/>Otherwise click New.
-            </TextBlock>
-        </WrapPanel>
-
         <Label x:Name="lblTest" HorizontalAlignment="Left" Margin="311,289,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

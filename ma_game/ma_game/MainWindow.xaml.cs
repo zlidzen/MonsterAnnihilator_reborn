@@ -35,6 +35,7 @@ namespace ma_game
             strtList.Add(btnQuit);
             ShowControl(strtList);
             ShowPanel(wpStart);
+            txbStart.Text = Properties.Resources.StartText;
         }
 
         private void BtnQuit_Click(object sender, RoutedEventArgs e)
@@ -44,7 +45,7 @@ namespace ma_game
 
         private void BtnScores_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Scores!", Properties.Resources.MainTitle + Properties.Resources.ScoresTitle);
+            txbStart.Text = Properties.Resources.ScoresText;            
         }
 
         private void BtnGame_Click(object sender, RoutedEventArgs e)
@@ -55,15 +56,14 @@ namespace ma_game
             strtList.Add(btnGame);
             strtList.Add(btnAbout);
             strtList.Add(btnScores);
-            ShowControl(strtList, false);
-            ShowPanel(wpStart, false);
+            ShowControl(strtList, false);            
 
             strtList.Clear();
             strtList.Add(btnNewGame);
             strtList.Add(btnLoadGame);
             strtList.Add(btnBack);
             ShowControl(strtList);
-            ShowPanel(wpGame);
+            txbStart.Text = Properties.Resources.GameText;
 
             btnQuit.IsEnabled = true;
             Title = Properties.Resources.MainTitle + Properties.Resources.GameTitle;
@@ -71,12 +71,12 @@ namespace ma_game
 
         private void BtnHelp_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Help!", Properties.Resources.MainTitle + Properties.Resources.HelpTitle);
+            txbStart.Text = Properties.Resources.HelpText;            
         }
 
         private void BtnAbout_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("About!", Properties.Resources.MainTitle + Properties.Resources.AboutTitle);
+            txbStart.Text = Properties.Resources.AboutText;           
         }
 
         private static void ShowControl(List<Control> arrBtn, bool ok = true)
@@ -123,16 +123,14 @@ namespace ma_game
                     strtList.Add(btnLoadGame);
                     strtList.Add(btnBack);
                     ShowControl(strtList, false);
-                    ShowPanel(wpGame, false);
+                    txbStart.Text = Properties.Resources.StartText;
 
                     strtList.Clear();
                     strtList.Add(btnGame);
                     strtList.Add(btnAbout);
                     strtList.Add(btnScores);
-                    ShowControl(strtList);
-                    ShowPanel(wpStart);
+                    ShowControl(strtList);                    
                     break;
-
                 case 1:
                     strtList.Add(btnMake);
                     ShowControl(strtList, false);
@@ -142,20 +140,20 @@ namespace ma_game
                     strtList.Add(btnNewGame);
                     strtList.Add(btnLoadGame);
                     ShowControl(strtList);
-                    ShowPanel(wpGame);
+                    ShowPanel(wpStart);
                     break;
                 case 2:
                     strtList.Add(btnLoad);
                     ShowControl(strtList, false);
+                    ShowPanel(wpLoadHero, false);
 
                     strtList.Clear();
                     strtList.Add(btnNewGame);
                     strtList.Add(btnLoadGame);
                     ShowControl(strtList);
-                    ShowPanel(wpGame);
+                    ShowPanel(wpStart);
                     break;
             }
-
             backStep = 0;
             lblTest.Content = backStep.ToString();
 
@@ -171,7 +169,7 @@ namespace ma_game
             strtList.Add(btnNewGame);
             strtList.Add(btnLoadGame);
             ShowControl(strtList, false);
-            ShowPanel(wpGame, false);
+            ShowPanel(wpStart, false);
 
             strtList.Clear();
             strtList.Add(btnMake);
@@ -193,10 +191,12 @@ namespace ma_game
             strtList.Add(btnNewGame);
             strtList.Add(btnLoadGame);
             ShowControl(strtList, false);
+            ShowPanel(wpStart, false);
 
             strtList.Clear();
             strtList.Add(btnLoad);
             ShowControl(strtList);
+            ShowPanel(wpLoadHero);
 
             btnQuit.IsEnabled = true;
             Title = Properties.Resources.MainTitle + Properties.Resources.LoadHeroTitle;
@@ -204,8 +204,5 @@ namespace ma_game
             backStep = 2;
             lblTest.Content = backStep.ToString();
         }
-
-
-
     }
 }

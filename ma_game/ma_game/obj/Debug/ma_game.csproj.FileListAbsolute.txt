@@ -11,3 +11,4 @@ E:\My_proj\MonsterAnnihilator\dev\ma_game\ma_game\obj\Debug\ma_game.Properties.R
 E:\My_proj\MonsterAnnihilator\dev\ma_game\ma_game\obj\Debug\ma_game.csproj.GenerateResource.Cache
 E:\My_proj\MonsterAnnihilator\dev\ma_game\ma_game\obj\Debug\ma_game.exe
 E:\My_proj\MonsterAnnihilator\dev\ma_game\ma_game\obj\Debug\ma_game.pdb
+E:\My_proj\MonsterAnnihilator\dev\ma_game\ma_game\obj\Debug\ma_game.csprojResolveAssemblyReference.cache
