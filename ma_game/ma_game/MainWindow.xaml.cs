@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -197,12 +198,34 @@ namespace ma_game
             strtList.Add(btnLoad);
             ShowControl(strtList);
             ShowPanel(wpLoadHero);
+            LoadHeroList();
 
             btnQuit.IsEnabled = true;
             Title = Properties.Resources.MainTitle + Properties.Resources.LoadHeroTitle;
 
             backStep = 2;
             lblTest.Content = backStep.ToString();
+        }
+
+        private void LoadHeroList()
+        {
+            String line;
+            lbxListHero.Items.Clear();
+            try
+            {
+                StreamReader sr = new StreamReader("SampleH.txt");
+                line = sr.ReadLine();
+                while (line != null)
+                {
+                    lbxListHero.Items.Add(line);
+                    line = sr.ReadLine();
+                }
+                sr.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Exception: " + e.Message);
+            }
         }
     }
 }
