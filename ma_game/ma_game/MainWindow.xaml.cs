@@ -35,7 +35,10 @@ namespace ma_game
             strtList.Add(btnScores);
             strtList.Add(btnQuit);
             ShowControl(strtList);
+            strtList.Clear();
             ShowPanel(wpStart);
+            ShowPanel(wpLoadHero, false);
+            ShowPanel(wpLoadHero, false);
             txbStart.Text = Properties.Resources.StartText;
         }
 
@@ -64,7 +67,8 @@ namespace ma_game
             strtList.Add(btnLoadGame);
             strtList.Add(btnBack);
             ShowControl(strtList);
-            txbStart.Text = Properties.Resources.GameText;
+            strtList.Clear();
+            txbStart.Text = Properties.Resources.GameText;            
 
             btnQuit.IsEnabled = true;
             Title = Properties.Resources.MainTitle + Properties.Resources.GameTitle;
@@ -105,9 +109,10 @@ namespace ma_game
             DoubleAnimation dblAnim = new DoubleAnimation();
             dblAnim.From = startA;
             dblAnim.To = endA;
-            dblAnim.Duration = new Duration(TimeSpan.FromMilliseconds(500));
+            dblAnim.Duration = new Duration(TimeSpan.FromMilliseconds(300));
 
             pan.Visibility = ok ? Visibility.Visible : Visibility.Hidden;
+            pan.IsEnabled = ok;
             pan.BeginAnimation(OpacityProperty, dblAnim);
         }
 
@@ -130,7 +135,8 @@ namespace ma_game
                     strtList.Add(btnGame);
                     strtList.Add(btnAbout);
                     strtList.Add(btnScores);
-                    ShowControl(strtList);                    
+                    ShowControl(strtList);
+                    strtList.Clear();
                     break;
                 case 1:
                     strtList.Add(btnMake);
@@ -141,6 +147,7 @@ namespace ma_game
                     strtList.Add(btnNewGame);
                     strtList.Add(btnLoadGame);
                     ShowControl(strtList);
+                    strtList.Clear();
                     ShowPanel(wpStart);
                     break;
                 case 2:
@@ -152,6 +159,7 @@ namespace ma_game
                     strtList.Add(btnNewGame);
                     strtList.Add(btnLoadGame);
                     ShowControl(strtList);
+                    strtList.Clear();
                     ShowPanel(wpStart);
                     break;
             }
@@ -226,6 +234,19 @@ namespace ma_game
             {
                 MessageBox.Show("Exception: " + e.Message);
             }
+        }
+
+        private void cbxSpec_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {            
+            Human aH = Game.b;
+            if (cbxSpec.SelectedIndex == Game.g.Sp) aH = Game.g;
+
+            lblHeroLvl.Content = "Level: 1";
+            lblHeroHelth.Content = "Health: " + aH.Helsh.ToString();
+            lblHeroPower.Content = "Power: " + aH.Power.ToString();
+            lblHeroResist.Content = "Resist: " + aH.Resist.ToString();
+            lblHeroAttack.Content = "Attack: " + aH.attackDice.ToString();
+            lblHeroDefence.Content = "Defence: " + aH.defenceDice.ToString();
         }
     }
 }

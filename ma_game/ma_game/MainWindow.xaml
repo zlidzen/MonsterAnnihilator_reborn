@@ -24,11 +24,11 @@
             </Setter>
         </Style>
 
-        <Style x:Key="lItemMakeHeroStyle">
+        <Style x:Key="pannelStyle">
             <Setter Property="Control.Opacity" Value ="0.0"/>
             <Setter Property="Control.Visibility" Value="Visible"/>
             <Setter Property="Control.Background" Value="#99938D8D"/>
-            <Setter Property="Control.IsEnabled" Value="True"/>
+            <Setter Property="Control.IsEnabled" Value="true"/>
         </Style>
     </Window.Resources>
     <Grid>
@@ -46,15 +46,16 @@
 
         <Button x:Name ="btnQuit" Content="Quit" HorizontalAlignment="Left" Margin="265,230,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnQuit_Click"/>
         <Label Content ="2017" HorizontalAlignment="Left" Margin="157,289,0,0" VerticalAlignment="Top"/>
-        <WrapPanel x:Name="wpNewHero" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
-            <Label x:Name="lblHeroName" Content="Cool name:" HorizontalAlignment="Left" Margin="8,8,0,6" Height="23" Width="71" VerticalAlignment="Top"/>
+
+        <WrapPanel x:Name="wpNewHero" Margin="8,8,95,31" Style="{StaticResource pannelStyle}">
+            <Label x:Name="lblHeroName" Content="Cool name:" HorizontalAlignment="Left" Margin="8,8,0,6" Height="25" Width="71" VerticalAlignment="Top"/>
             <TextBox x:Name ="tbxHeroName" HorizontalAlignment="Left" Margin="8,8,0,0" Height="23" Width="139" VerticalAlignment="Top"/>
 
-            <Label x:Name="lblPass" Content="Password:" HorizontalAlignment="Left" Margin="8,0,0,6" Height="23" Width="71" VerticalAlignment="Top"/>
+            <Label x:Name="lblPass" Content="Password:" HorizontalAlignment="Left" Margin="8,0,0,6" Height="25" Width="71" VerticalAlignment="Top"/>
             <PasswordBox x:Name="tbxPass" HorizontalAlignment="Left" Margin="8,0,0,0" Height="23" Width="139" VerticalAlignment="Top"/>
 
-            <Label x:Name="lblSpec" Content="Specialty:" HorizontalAlignment="Left" Margin="8,0,0,0" VerticalAlignment="Top" Height="23" Width="71"/>
-            <ComboBox x:Name="cbxSpec" HorizontalAlignment="Left" Margin="8,0,0,0" Height="25" Width="140" VerticalAlignment="Top">
+            <Label x:Name="lblSpec" Content="Speciality:" HorizontalAlignment="Left" Margin="8,0,0,0" VerticalAlignment="Top" Height="25" Width="71"/>
+            <ComboBox x:Name="cbxSpec" HorizontalAlignment="Left" Margin="8,0,0,0" Height="25" Width="140" VerticalAlignment="Top" SelectionChanged="cbxSpec_SelectionChanged">
                 <ComboBoxItem Content="Berserker"/>
                 <ComboBoxItem Content="Guardian"/>
             </ComboBox>
@@ -67,11 +68,13 @@
             <Label x:Name="lblHeroDefence" Content="Defence: 0" HorizontalAlignment="Left"  Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
             <Label x:Name="lblHeroExp" Content="Experience: 0" HorizontalAlignment="Left"  Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
         </WrapPanel>
-        <WrapPanel x:Name="wpStart" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
-            <TextBlock x:Name="txbStart" TextWrapping="Wrap" Margin="0,60,0,33" Padding="5,10,10,10" TextAlignment="Center" Width="252" />
-        </WrapPanel>
-        <WrapPanel x:Name="wpLoadHero" Margin="10,10,93,31" Style="{StaticResource lItemMakeHeroStyle}">
+
+        <WrapPanel x:Name="wpLoadHero" Margin="10,10,93,31" Style="{StaticResource pannelStyle}">
             <ListBox x:Name="lbxListHero" Width="230" Height="260" Margin="10, 10, 10, 10" />
+        </WrapPanel>
+
+        <WrapPanel x:Name="wpStart" Margin="8,8,95,33" Style="{StaticResource pannelStyle}">
+            <TextBlock x:Name="txbStart" TextWrapping="Wrap" Margin="0,60,0,33" Padding="5,10,10,10" TextAlignment="Center" Width="252" />
         </WrapPanel>
         <Label x:Name="lblTest" HorizontalAlignment="Left" Margin="311,289,0,0" VerticalAlignment="Top"/>
     </Grid>
