@@ -9,9 +9,12 @@ namespace ma_game
 {
     class Game
     {
-        public static Human b = new Human("", 1, 25, 3, 2, 1, new Dice(), 1, new Dice(1, 5), 0, "", 0);
-        public static Human g = new Human("", 1, 30, 2, 3, 1, new Dice(1, 5), 1, new Dice(), 0, "", 1);
-
+    	public static Human getStartPerson(int sp)
+    	{
+    		if (sp == 0) return new Human("", 1, 25, 3, 2, 1, new Dice(), 1, new Dice(1, 5), 0, "", 0);
+    		else return new Human("", 1, 30, 2, 3, 1, new Dice(1, 5), 1, new Dice(), 0, "", 1);
+		}
+		
         // t*xdn
         public static int GetThrow(int t, Dice d)
         {

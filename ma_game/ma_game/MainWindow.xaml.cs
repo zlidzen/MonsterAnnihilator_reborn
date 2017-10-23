@@ -238,8 +238,7 @@ namespace ma_game
 
         private void cbxSpec_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {            
-            Human aH = Game.b;
-            if (cbxSpec.SelectedIndex == Game.g.Sp) aH = Game.g;
+            Human aH = Game.getStartPerson(cbxSpec.SelectedIndex);            
 
             lblHeroLvl.Content = "Level: 1";
             lblHeroHelth.Content = "Health: " + aH.Helsh.ToString();
