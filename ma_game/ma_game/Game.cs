@@ -9,12 +9,12 @@ namespace ma_game
 {
     class Game
     {
-    	public static Human getStartPerson(int sp)
-    	{
-    		if (sp == 0) return new Human("", 1, 25, 3, 2, 1, new Dice(), 1, new Dice(1, 5), 0, "", 0);
-    		else return new Human("", 1, 30, 2, 3, 1, new Dice(1, 5), 1, new Dice(), 0, "", 1);
-		}
-		
+        public static Human getStartPerson(int sp)
+        {
+            if (sp == 0) return new Human("", 1, 25, 3, 2, 1, new Dice(), 1, new Dice(1, 5), 0, "", 0);
+            else return new Human("", 1, 30, 2, 3, 1, new Dice(1, 5), 1, new Dice(), 0, "", 1);
+        }
+        
         // t*xdn
         public static int GetThrow(int t, Dice d)
         {
@@ -45,9 +45,42 @@ namespace ma_game
                 sr.Close();
 
                 if (nameList.Contains(h.name)) return false;
+                /*
+                //read / write to binary file
+            
+class MyStream
+{
+    private const string FILE_NAME = "Test.data";
+        using (FileStream fs = new FileStream(FILE_NAME, FileMode.CreateNew))
+        {
+            using (BinaryWriter w = new BinaryWriter(fs))
+            {
+                for (int i = 0; i < 11; i++)
+                {
+                    w.Write(i);
+                }
+            }
+        }
+
+        using (FileStream fs = new FileStream(FILE_NAME, FileMode.Open, FileAccess.Read))
+        {
+            using (BinaryReader r = new BinaryReader(fs))
+            {
+                for (int i = 0; i < 11; i++)
+                {
+                    Console.WriteLine(r.ReadInt32());
+                }
+            }
+        }
+    }
+}
+
+                */
 
                 string fileName = h.name + ".her";
-                BinaryWriter hw = new BinaryWriter(File.Open(fileName, FileMode.OpenOrCreate));
+                using(BinaryWriter hw = new BinaryWriter(File.Open(fileName, FileMode.OpenOrCreate, FileAccess.Write, FileShare.None)))
+                {
+                hw.Seek(0, SeekOrigin.End);
                 hw.Write(h.name);
                 hw.Write(h.Pass);
                 hw.Write(h.Lvl);
@@ -60,7 +93,7 @@ namespace ma_game
                 hw.Write(h.defenceDice.ToString());
                 hw.Write(h.Sp);
                 hw.Write(h.Exp);
-                hw.Close();
+                }
 
                 StreamWriter sw = new StreamWriter("SampleH.txt");
                 sw.WriteLine(h.name);
