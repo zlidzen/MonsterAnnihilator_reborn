@@ -247,5 +247,17 @@ namespace ma_game
             lblHeroAttack.Content = "Attack: " + aH.attackDice.ToString();
             lblHeroDefence.Content = "Defence: " + aH.defenceDice.ToString();
         }
+
+        private void btnMake_Click(object sender, RoutedEventArgs e)
+        {
+            // save new Hero
+            Human nh = Game.getStartPerson(cbxSpec.SelectedIndex);
+            Game.MakeNewHero(nh);
+        }
+
+        private void btnLoad_Click(object sender, RoutedEventArgs e)
+        {
+            // load picked Hero
+        }
     }
 }

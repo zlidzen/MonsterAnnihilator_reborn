@@ -32,8 +32,8 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Button x:Name ="btnLoad" Content="Load" HorizontalAlignment="Left" Margin="265,80,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}"/>
-        <Button x:Name ="btnMake" Content="Make" HorizontalAlignment="Left" Margin="265,80,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}"/>
+        <Button x:Name ="btnLoad" Content="Load" HorizontalAlignment="Left" Margin="265,80,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="btnLoad_Click"/>
+        <Button x:Name ="btnMake" Content="Make" HorizontalAlignment="Left" Margin="265,80,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="btnMake_Click"/>
 
         <Button x:Name ="btnNewGame" Content="New" HorizontalAlignment="Left" Margin="265,30,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnNewGame_Click"/>
         <Button x:Name ="btnLoadGame" Content="Load" HorizontalAlignment="Left" Margin="265,80,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="btnLoadGame_Click"/>

@@ -80,27 +80,55 @@ class MyStream
                 string fileName = h.name + ".her";
                 using(BinaryWriter hw = new BinaryWriter(File.Open(fileName, FileMode.OpenOrCreate, FileAccess.Write, FileShare.None)))
                 {
-                hw.Seek(0, SeekOrigin.End);
-                hw.Write(h.name);
-                hw.Write(h.Pass);
-                hw.Write(h.Lvl);
-                hw.Write(h.Helsh);
-                hw.Write(h.Power);
-                hw.Write(h.Resist);
-                hw.Write(h.aThrow);
-                hw.Write(h.attackDice.ToString());
-                hw.Write(h.dThrow);
-                hw.Write(h.defenceDice.ToString());
-                hw.Write(h.Sp);
-                hw.Write(h.Exp);
+                    hw.Seek(0, SeekOrigin.End);
+                    hw.Write(h.name);
+                    hw.Write(h.Pass);
+                    hw.Write(h.Lvl);
+                    hw.Write(h.Helsh);
+                    hw.Write(h.Power);
+                    hw.Write(h.Resist);
+                    hw.Write(h.aThrow);
+                    hw.Write(h.attackDice.ToString());
+                    hw.Write(h.dThrow);
+                    hw.Write(h.defenceDice.ToString());
+                    hw.Write(h.Sp);
+                    hw.Write(h.Exp);
                 }
 
                 StreamWriter sw = new StreamWriter("SampleH.txt");
                 sw.WriteLine(h.name);
-                sr.Close();
+                sw.Close();
             }            
             catch (Exception e) { return false; }
             return true;
+        }
+
+        //public static Human getStartPerson(int sp)
+        public static void LoadHero(string fileName)
+        {
+            string name, pass, aDice, dDice;
+            int lvl, helsh, power, resist, aThrow, dThrow, sp, exp;
+
+            using (BinaryReader hr = new BinaryReader(File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.None)))
+            {                
+                name = hr.ReadString();
+                pass = hr.ReadString();
+                lvl = hr.ReadInt32();
+                helsh = hr.ReadInt32();
+                power = hr.ReadInt32();
+                resist = hr.ReadInt32();
+                aThrow = hr.ReadInt32();
+                aDice = hr.ReadString();
+                dThrow = hr.ReadInt32();
+                dDice = hr.ReadString();
+                sp = hr.ReadInt32();
+                exp = hr.ReadInt32();
+            }
+            Dice dd = new Dice(dDice);
+            Dice ad = new Dice(aDice);
+            Human lh = new Human(name, lvl, helsh, power,
+                                 resist, aThrow, ad,
+                                dThrow, dd, exp, pass, sp);
         }
 
     }
