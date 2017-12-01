@@ -12,3 +12,17 @@ E:\My_proj\MonsterAnnihilator\dev\ma_game\ma_game\obj\Debug\ma_game.csproj.Gener
 E:\My_proj\MonsterAnnihilator\dev\ma_game\ma_game\obj\Debug\ma_game.exe
 E:\My_proj\MonsterAnnihilator\dev\ma_game\ma_game\obj\Debug\ma_game.pdb
 E:\My_proj\MonsterAnnihilator\dev\ma_game\ma_game\obj\Debug\ma_game.csprojResolveAssemblyReference.cache
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\bin\Debug\ma_game.exe.config
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\bin\Debug\ma_game.exe
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\bin\Debug\ma_game.pdb
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\MainWindow.g.cs
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\App.g.cs
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ma_game_MarkupCompile.cache
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ma_game_MarkupCompile.lref
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\MainWindow.baml
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ma_game.g.resources
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ma_game.Properties.Resources.resources
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ma_game.csproj.GenerateResource.Cache
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ma_game.csproj.CoreCompileInputs.cache
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ma_game.exe
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ma_game.pdb
