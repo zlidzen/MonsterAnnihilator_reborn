@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ma_game
+namespace ma_krnl
 {
     public class Human : Puppet
     {

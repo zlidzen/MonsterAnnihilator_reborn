@@ -3,26 +3,31 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ma_game"
+        xmlns:puppetControl="clr-namespace:ma_game"
         mc:Ignorable="d"
-        Title="" Height="350" Width="800" MinWidth="800" MinHeight="350" MaxWidth="365" MaxHeight="348" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
-    <Grid ShowGridLines="True">
+        Title="" Height="430" Width="710" MinWidth="710" MinHeight="430" MaxWidth="365" MaxHeight="348" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+    <Grid ShowGridLines="True" Margin="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto" MinHeight="90"></RowDefinition>
         </Grid.RowDefinitions>
-        <Menu Grid.Row="0" Height="22" Margin="0" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="245*"/>
+            <ColumnDefinition Width="244*"/>
+            <ColumnDefinition Width="245*"/>
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Grid.ColumnSpan="3" Height="22" Margin="0" VerticalAlignment="Top">
             <MenuItem Header="Game">
                 <MenuItem Header="New"/>
                 <MenuItem Header="Restart"/>
                 <MenuItem Header="Editor"/>
                 <MenuItem Header="Settings"/>
-                <MenuItem Header="Exit"/>
+                <MenuItem Header="Exit" Click="MenuExit_Click"/>
             </MenuItem>
             <MenuItem Header="Hero">
-                <MenuItem Header="Load"/>
-                <MenuItem Header="Make"/>
+                <MenuItem Header="Load" Click="MenuHeroLoad_Click"/>
+                <MenuItem Header="Make" Click="MenuHeroMake_Click"/>
             </MenuItem>
             <MenuItem Header="Help">
                 <MenuItem Header="WTF1?"/>
@@ -36,10 +41,10 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
         </Grid>
-        <TextBox HorizontalAlignment="Left" Height="80" Margin="10,10,0,10" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="459"/>
-        <Label Content="UC for Hero" HorizontalAlignment="Left" Margin="118,64,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="UC action" HorizontalAlignment="Left" Margin="297,64,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="UC for Monstr (the same like Hero)" HorizontalAlignment="Left" Margin="554,72,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="Buttons..." HorizontalAlignment="Left" Margin="601,30,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="80" Margin="10,10,0,10" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="400" Grid.ColumnSpan="2"/>
+        <puppetControl:ucPuppetFrame x:Name="hFrame" Grid.Row="1" Margin="10,5,10,0" Height="270" VerticalAlignment="Top"/>
+        <Label Content="UC action" HorizontalAlignment="Left" Margin="34,64,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="0"/>
+        <puppetControl:ucPuppetFrame x:Name="mFrame" Grid.Row="1" Grid.Column="2" Margin="10,5,10,0" Height="270" VerticalAlignment="Top"/>
+        <Label Content="Buttons..." HorizontalAlignment="Left" Margin="72,30,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="99"/>
     </Grid>
 </Window>

@@ -4,11 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ma_krnl;
 
-namespace ma_game
+namespace ma_krnl
 {
-    class Game
+    /*class Game
     {
         public static Human getStartPerson(int sp)
         {
@@ -78,7 +77,7 @@ class MyStream
 
                 */
 
-                string fileName = h.name + ".her";
+/*                string fileName = h.name + ".her";
                 using(BinaryWriter hw = new BinaryWriter(File.Open(fileName, FileMode.OpenOrCreate, FileAccess.Write, FileShare.None)))
                 {
                     hw.Seek(0, SeekOrigin.End);
@@ -132,5 +131,5 @@ class MyStream
                                 dThrow, dd, exp, pass, sp);
         }
 
-    }
+    }*/
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ma_game
+namespace ma_krnl
 {
     public abstract class Puppet
     {
@@ -68,7 +68,7 @@ namespace ma_game
             this.defenceDice = defenceDice;            
         }
 
-        private List<string> ToStringList() {
+        /*private List<string> ToStringList() {
             List<string> res = new List<string>();
             res.Add(name);
             res.Add(lvl.ToString());
@@ -78,6 +78,6 @@ namespace ma_game
             res.Add(Game.GetThrowStr(attackThrow, attackDice));
             res.Add(Game.GetThrowStr(defenceThrow, defenceDice));
             return res;
-        }
+        }*/
     }    
 }

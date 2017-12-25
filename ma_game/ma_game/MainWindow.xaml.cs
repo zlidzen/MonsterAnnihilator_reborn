@@ -26,5 +26,24 @@ namespace ma_game
         {
             InitializeComponent();           
         }
+
+        private void MenuHeroLoad_Click(object sender, RoutedEventArgs e)
+        {
+            hLoadWND hlwnd = new hLoadWND();
+            hlwnd.Owner = this;
+            hlwnd.ShowDialog();
+        }
+
+        private void MenuHeroMake_Click(object sender, RoutedEventArgs e)
+        {
+            hMakeWND hmwnd = new hMakeWND();
+            hmwnd.Owner = this;
+            hmwnd.ShowDialog();
+        }
+
+        private void MenuExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
