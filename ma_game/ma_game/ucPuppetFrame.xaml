@@ -6,11 +6,14 @@
              xmlns:local="clr-namespace:ma_game"
              mc:Ignorable="d" Width="212" Height="260">
     <Grid>
-        <Image HorizontalAlignment="Left" Height="151" Margin="10,41,0,0" VerticalAlignment="Top" Width="99"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Margin="18,206,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Margin="63,206,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Margin="108,206,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Margin="153,206,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="5"  Margin="10,40,0,0" HorizontalAlignment="Left" Width="99" Height="151" VerticalAlignment="Top">
+            <Image Width="99" Height="151" Margin="0,0,0,0"/>
+        </Border>
+
+        <local:ucAbility x:Name="aFirst" HorizontalAlignment="Left" Height="40" Margin="11,206,0,0" VerticalAlignment="Top" Width="40"/>
+        <local:ucAbility x:Name="aSecond" HorizontalAlignment="Left" Height="40" Margin="61,206,0,0" VerticalAlignment="Top" Width="40"/>
+        <local:ucAbility x:Name="aThird" HorizontalAlignment="Left" Height="40" Margin="111,206,0,0" VerticalAlignment="Top" Width="40"/>
+        <local:ucAbility x:Name="aForth" HorizontalAlignment="Left" Height="40" Margin="161,206,0,0" VerticalAlignment="Top" Width="40"/>
         <Label Content="Name: 12345678901234567890" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Spec.: Barbarian" HorizontalAlignment="Left" Margin="114,40,0,0" VerticalAlignment="Top"/>
         <Label Content="Level: 1" HorizontalAlignment="Left" Margin="114,66,0,0" VerticalAlignment="Top"/>

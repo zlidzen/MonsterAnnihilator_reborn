@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\App.xaml
-11151548125
+5-1143286532
 
-13-1461322364
-13738642453
-MainWindow.xaml;
+151796942445
+152078008783
+hLoadWND.xaml;hMakeWND.xaml;MainWindow.xaml;ucAbility.xaml;ucPuppetFrame.xaml;
 
-True
+False
 

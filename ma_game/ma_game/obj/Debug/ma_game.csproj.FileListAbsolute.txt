@@ -26,3 +26,16 @@ D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ma_game.csproj.Gen
 D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ma_game.csproj.CoreCompileInputs.cache
 D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ma_game.exe
 D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ma_game.pdb
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\bin\Debug\ma_krnl.dll
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\bin\Debug\ma_krnl.pdb
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ma_game.csprojResolveAssemblyReference.cache
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\hLoadWND.g.cs
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\hMakeWND.g.cs
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ucAbility.g.cs
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ucPuppetFrame.g.cs
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\hLoadWND.baml
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\hMakeWND.baml
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ucAbility.baml
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ucPuppetFrame.baml
+D:\temp\sandbox\MA\branches\develop\ma_game\ma_game\obj\Debug\ma_game.maResource.resources
