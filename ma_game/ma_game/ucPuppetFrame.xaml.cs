@@ -24,5 +24,15 @@ namespace ma_game
         {
             InitializeComponent();
         }
+
+        public string strScreen
+        {
+            set
+            {
+                ImageBrush myBrush = new ImageBrush();
+                myBrush.ImageSource = new BitmapImage(new Uri(@value, UriKind.Relative));
+                picPuppet.Background = myBrush;
+            }
+        }
     }
 }

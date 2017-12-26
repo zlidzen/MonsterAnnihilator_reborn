@@ -5,22 +5,39 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ma_game"
              mc:Ignorable="d" Width="212" Height="260">
+    <UserControl.Resources>
+        <Style TargetType="Label">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+        </Style>
+
+        <Style x:Key="ucAbility">
+            <Setter Property="UserControl.Height" Value="40"/>
+            <Setter Property="UserControl.Width" Value="40"/>
+            <Setter Property="UserControl.HorizontalAlignment" Value="Left"/>
+            <Setter Property="UserControl.VerticalAlignment" Value="Top"/>
+        </Style>
+    </UserControl.Resources>
+    
+    
     <Grid>
-        <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="5"  Margin="10,40,0,0" HorizontalAlignment="Left" Width="99" Height="151" VerticalAlignment="Top">
-            <Image Width="99" Height="151" Margin="0,0,0,0"/>
+        <Border x:Name="picPuppet" BorderBrush="Silver" BorderThickness="1" CornerRadius="5"  Margin="10,40,0,0" HorizontalAlignment="Left" Width="99" Height="151" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Border.Background>
+                <ImageBrush  Stretch="Fill" TileMode="None" />
+            </Border.Background>
         </Border>
 
-        <local:ucAbility x:Name="aFirst" HorizontalAlignment="Left" Height="40" Margin="11,206,0,0" VerticalAlignment="Top" Width="40"/>
-        <local:ucAbility x:Name="aSecond" HorizontalAlignment="Left" Height="40" Margin="61,206,0,0" VerticalAlignment="Top" Width="40"/>
-        <local:ucAbility x:Name="aThird" HorizontalAlignment="Left" Height="40" Margin="111,206,0,0" VerticalAlignment="Top" Width="40"/>
-        <local:ucAbility x:Name="aForth" HorizontalAlignment="Left" Height="40" Margin="161,206,0,0" VerticalAlignment="Top" Width="40"/>
-        <Label Content="Name: 12345678901234567890" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Spec.: Barbarian" HorizontalAlignment="Left" Margin="114,40,0,0" VerticalAlignment="Top"/>
-        <Label Content="Level: 1" HorizontalAlignment="Left" Margin="114,66,0,0" VerticalAlignment="Top"/>
-        <Label Content="Helth: 25" HorizontalAlignment="Left" Margin="114,86,0,0" VerticalAlignment="Top"/>
-        <Label Content="Power: 100" HorizontalAlignment="Left" Margin="114,106,0,0" VerticalAlignment="Top"/>
-        <Label Content="Resist: 100" HorizontalAlignment="Left" Margin="114,126,0,0" VerticalAlignment="Top"/>
-        <Label Content="Attack: 0d0" HorizontalAlignment="Left" Margin="114,146,0,0" VerticalAlignment="Top"/>
-        <Label Content="Defence: 0d0" HorizontalAlignment="Left" Margin="114,166,0,0" VerticalAlignment="Top"/>
+        <local:ucAbility x:Name="aFirst" Margin="11,206,0,0" Style="{StaticResource ucAbility}"/>
+        <local:ucAbility x:Name="aSecond" Margin="61,206,0,0" Style="{StaticResource ucAbility}"/>
+        <local:ucAbility x:Name="aThird" Margin="111,206,0,0" Style="{StaticResource ucAbility}"/>
+        <local:ucAbility x:Name="aForth" Margin="161,206,0,0" Style="{StaticResource ucAbility}"/>
+        <Label Content="Name: 12345678901234567890" Margin="10,10,0,0"/>
+        <Label Content="Spec.: Barbarian" Margin="114,40,0,0"/>
+        <Label Content="Level: 1" Margin="114,66,0,0"/>
+        <Label Content="Helth: 25" Margin="114,86,0,0"/>
+        <Label Content="Power: 100" Margin="114,106,0,0"/>
+        <Label Content="Resist: 100" Margin="114,126,0,0"/>
+        <Label Content="Attack: 0d0" Margin="114,146,0,0"/>
+        <Label Content="Defence: 0d0" Margin="114,166,0,0"/>
     </Grid>
 </UserControl>

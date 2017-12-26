@@ -121,4 +121,67 @@
   <data name="aLocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\aLocked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="arm_l2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\arm_l2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arm_l2b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\arm_l2b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arm_l2r" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\arm_l2r.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arm_r2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\arm_r2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arm_r2b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\arm_r2b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arm_r2r" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\arm_r2r.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="body_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\body_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="body_2b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\body_2b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="body_2r" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\body_2r.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Head_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Head_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Head_2b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Head_2b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Head_2r" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Head_2r.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="l_leg_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\l_leg_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="l_leg_2b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\l_leg_2b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="l_leg_2r" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\l_leg_2r.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="r_leg_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\r_leg_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="r_leg_2b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\r_leg_2b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="r_leg_2r" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\r_leg_2r.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tr_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tr_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tr_2b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tr_2b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tr_2r" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tr_2r.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

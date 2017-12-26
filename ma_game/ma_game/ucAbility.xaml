@@ -6,7 +6,10 @@
              xmlns:local="clr-namespace:ma_game"
              mc:Ignorable="d" 
              d:DesignHeight="64" d:DesignWidth="64">
-    <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="5">
-        <Image HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Source="Resources/aLocked.png" Stretch="UniformToFill"/>
+    <Border x:Name="picAbility" BorderBrush="Silver" BorderThickness="1" CornerRadius="5">
+        <Border.Background>
+            <ImageBrush  Stretch="Fill" TileMode="None" ImageSource="Resources/aLocked.png"/>
+        </Border.Background>
+       <!-- <Image HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Source="Resources/aLocked.png" Stretch="UniformToFill"/-->
     </Border>
 </UserControl>

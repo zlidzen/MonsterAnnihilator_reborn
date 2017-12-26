@@ -65,6 +65,9 @@
     <Compile Include="ucAbility.xaml.cs">
       <DependentUpon>ucAbility.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ucDummy.xaml.cs">
+      <DependentUpon>ucDummy.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ucPuppetFrame.xaml.cs">
       <DependentUpon>ucPuppetFrame.xaml</DependentUpon>
     </Compile>
@@ -95,6 +98,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ucAbility.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ucDummy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -143,6 +150,69 @@
     <Resource Include="Resources\aLocked.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arm_l2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arm_l2b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arm_l2r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arm_r2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arm_r2b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arm_r2r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\body_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\body_2b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\body_2r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_2b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_2r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l_leg_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l_leg_2b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l_leg_2r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r_leg_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r_leg_2b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r_leg_2r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_2b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_2r.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
