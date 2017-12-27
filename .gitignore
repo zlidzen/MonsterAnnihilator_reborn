@@ -1,0 +1,25 @@
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+
+# Build results
+
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+
+# Visual Studio temp something
+.vs/
+
+# VS 2015+
+*.vc.vc.opendb
+*.vc.db

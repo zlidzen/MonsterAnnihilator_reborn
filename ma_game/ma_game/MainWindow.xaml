@@ -1,94 +1,51 @@
-﻿<Window x:Class="ma_game.StartWindow"
+<Window x:Class="ma_game.StartWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ma_game"
         mc:Ignorable="d"
-        Title="" Height="350" Width="365" MinWidth="365" MinHeight="350" MaxWidth="365" MaxHeight="348" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen">
-    <Window.Resources>
-        <Style x:Key="lBtnStyle" TargetType="Button">
-            <Setter Property="Control.RenderTransformOrigin" Value="0.5,0.5"/>
-            <Setter Property="Control.FontSize" Value="16" />
-            <Setter Property="Control.FontStyle" Value="Italic"/>
-            <Setter Property="Control.Opacity" Value ="0.0"/>
-            <Setter Property="Control.Visibility" Value="Visible"/>
-            <Setter Property="Control.RenderTransform">
-                <Setter.Value>
-                    <TransformGroup>
-                        <SkewTransform AngleX="-23.617"/>
-                        <RotateTransform Angle="-21.971"/>
-                        <TranslateTransform X="4.46" Y="-1.799"/>
-                    </TransformGroup>
-                </Setter.Value>
-            </Setter>
-        </Style>
+        Title="" Height="430" Width="710" MinWidth="710" MinHeight="430" MaxWidth="365" MaxHeight="348" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
 
-        <Style x:Key="lItemMakeHeroStyle">
-            <Setter Property="Control.Opacity" Value ="0.0"/>
-            <Setter Property="Control.Visibility" Value="Visible"/>
-            <Setter Property="Control.Background" Value="#99938D8D"/>
-        </Style>
-    </Window.Resources>
-    <Grid>
-        <Button x:Name ="btnLoad" Content="Load" HorizontalAlignment="Left" Margin="265,80,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}"/>
-        <Button x:Name ="btnMake" Content="Make" HorizontalAlignment="Left" Margin="265,80,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}"/>
+    <Grid x:Name="mainGrid" ShowGridLines="True" Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto" MinHeight="90"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="245*"/>
+            <ColumnDefinition Width="160*"/>
+            <ColumnDefinition Width="245*"/>
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Grid.ColumnSpan="3" Height="22" Margin="0" VerticalAlignment="Top">
+            <MenuItem Header="Game">
+                <MenuItem Header="New"/>
+                <MenuItem Header="Restart"/>
+                <MenuItem Header="Editor"/>
+                <MenuItem Header="Settings"/>
+                <MenuItem Header="Exit" Click="MenuExit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Hero">
+                <MenuItem Header="Load" Click="MenuHeroLoad_Click"/>
+                <MenuItem Header="Make" Click="MenuHeroMake_Click"/>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="WTF1?"/>
+                <MenuItem Header="About us"/>
+            </MenuItem>
+        </Menu>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <local:ucPuppetFrame x:Name="hFrame" Grid.Row="1" Margin="10,5,10,0" Height="270" VerticalAlignment="Top"/>
+        <local:ucPuppetFrame x:Name="mFrame" Grid.Row="1" Grid.Column="2" Margin="10,5,10,0" Height="270" VerticalAlignment="Top"/>
+        <local:ucDummy x:Name="dAction" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="270" Width="158"/>
 
-        <Button x:Name ="btnNewGame" Content="New" HorizontalAlignment="Left" Margin="265,30,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnNewGame_Click"/>
-        <Button x:Name ="btnLoadGame" Content="Load" HorizontalAlignment="Left" Margin="265,80,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="btnLoadGame_Click"/>
-        <Button x:Name ="btnBack" Content="Back" HorizontalAlignment="Left" Margin="265,180,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnBack_Click" />
-
-        <Button x:Name ="btnGame" Content="Game" HorizontalAlignment="Left" Margin="265,30,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnGame_Click"/>
-        <Button x:Name ="btnAbout" Content="About" HorizontalAlignment="Left" Margin="265,80,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnAbout_Click"/>
-        <Button x:Name ="btnHelp" Content="Help" HorizontalAlignment="Left" Margin="265,130,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnHelp_Click"/>
-        <Button x:Name ="btnScores" Content="Scores" HorizontalAlignment="Left" Margin="265,180,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnScores_Click"/>
-
-        <Button x:Name ="btnQuit" Content="Quit" HorizontalAlignment="Left" Margin="265,230,0,0" VerticalAlignment="Top" Width="75" Height="32" Style="{StaticResource lBtnStyle}" Click="BtnQuit_Click"/>
-        <Label Content ="2017" HorizontalAlignment="Left" Margin="157,289,0,0" VerticalAlignment="Top"/>
-        <WrapPanel x:Name="wpNewHero" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
-            <Label x:Name="lblHeroName" Content="Cool name:" HorizontalAlignment="Left" Margin="8,8,0,6" Height="23" Width="71" VerticalAlignment="Top"/>
-            <TextBox x:Name ="tbxHeroName" HorizontalAlignment="Left" Margin="8,8,0,0" Height="23" Width="139" VerticalAlignment="Top"/>
-
-            <Label x:Name="lblPass" Content="Password:" HorizontalAlignment="Left" Margin="8,0,0,6" Height="23" Width="71" VerticalAlignment="Top"/>
-            <PasswordBox x:Name="tbxPass" HorizontalAlignment="Left" Margin="8,0,0,0" Height="23" Width="139" VerticalAlignment="Top"/>
-
-            <Label x:Name="lblSpec" Content="Specialty:" HorizontalAlignment="Left" Margin="8,0,0,0" VerticalAlignment="Top" Height="23" Width="71"/>
-            <ComboBox x:Name="cbxSpec" HorizontalAlignment="Left" Margin="8,0,0,0" Height="25" Width="140" VerticalAlignment="Top">
-                <ComboBoxItem Content="Berserker"/>
-                <ComboBoxItem Content="Guardian"/>
-            </ComboBox>
-
-            <Label x:Name="lblHeroLvl" Content="Level: 0" HorizontalAlignment="Left" Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
-            <Label x:Name="lblHeroHelth" Content="Health: 0/0" HorizontalAlignment="Left" Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
-            <Label x:Name="lblHeroPower" Content="Power: 0" HorizontalAlignment="Left"  Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
-            <Label x:Name="lblHeroResist" Content="Resist: 0" HorizontalAlignment="Left"  Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
-            <Label x:Name="lblHeroAttack" Content="Attack: 0" HorizontalAlignment="Left"  Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
-            <Label x:Name="lblHeroDefence" Content="Defence: 0" HorizontalAlignment="Left"  Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
-            <Label x:Name="lblHeroExp" Content="Experience: 0" HorizontalAlignment="Left"  Margin="85,0,0,0" VerticalAlignment="Top" Width="83"/>
-        </WrapPanel>
-        <WrapPanel x:Name="wpStart" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
-            <TextBlock TextWrapping="Wrap" Margin="0,60,0,33" Padding="5,10,10,10" TextAlignment="Justify" Width="252">
-                Welcome to the best game you've ever played!
-                <LineBreak/>18+
-                <LineBreak/>Be careful:
-                <LineBreak/>- you can't unsee it
-                <LineBreak/>- has side effects
-                <LineBreak/>- prohibited for pregnant, animal, pregnant animal
-            </TextBlock>
-        </WrapPanel>
-        <WrapPanel x:Name="wpAbout" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
-            <Label x:Name="lblAbout" Margin="85,85,0,0" VerticalAlignment="Top" Width="83">
-                copyright 2017
-            </Label>
-        </WrapPanel>
-        <WrapPanel x:Name="wpGame" Margin="8,8,95,33" Style="{StaticResource lItemMakeHeroStyle}">
-            <TextBlock TextWrapping="Wrap" Margin="0,60,0,33" Padding="5,10,10,10" TextAlignment="Justify" Width="252">
-                For start play, please click Game.
-                <LineBreak/>If you played earlier, click Load.
-                <LineBreak/>Otherwise click New.
-            </TextBlock>
-        </WrapPanel>
-
-        <Label x:Name="lblTest" HorizontalAlignment="Left" Margin="311,289,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="10,10,0,10" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" Width="322" Grid.ColumnSpan="2"/>
+        <Label Content="Buttons..." HorizontalAlignment="Left" Margin="72,30,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="99"/>
+        <Button Content="Test_btn" Grid.Column="1" HorizontalAlignment="Left" Margin="89,34,0,0" Grid.Row="2" VerticalAlignment="Top" Width="74" Click="addCntrl"/>
     </Grid>
 </Window>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -8,11 +8,12 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>ma_game</RootNamespace>
     <AssemblyName>ma_game</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -54,6 +56,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Game.cs" />
+    <Compile Include="maResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>maResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ucAbility.xaml.cs">
+      <DependentUpon>ucAbility.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ucDummy.xaml.cs">
+      <DependentUpon>ucDummy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ucPuppetFrame.xaml.cs">
+      <DependentUpon>ucPuppetFrame.xaml</DependentUpon>
+    </Compile>
+    <Page Include="hLoadWND.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="hMakeWND.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,10 +87,28 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="hLoadWND.xaml.cs">
+      <DependentUpon>hLoadWND.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="hMakeWND.xaml.cs">
+      <DependentUpon>hMakeWND.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ucAbility.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ucDummy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ucPuppetFrame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -85,6 +128,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="maResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>maResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,6 +139,80 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ma_krnl\ma_krnl.csproj">
+      <Project>{72ba8c56-2c33-4b39-88f6-00135d854c4d}</Project>
+      <Name>ma_krnl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\aLocked.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arm_l2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arm_l2b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arm_l2r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arm_r2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arm_r2b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arm_r2r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\body_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\body_2b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\body_2r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_2b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_2r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l_leg_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l_leg_2b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l_leg_2r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r_leg_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r_leg_2b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r_leg_2r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_2b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_2r.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
