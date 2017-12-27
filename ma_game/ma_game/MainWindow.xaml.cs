@@ -45,5 +45,17 @@ namespace ma_game
         {
             this.Close();
         }
+
+        // test add control to grid
+        private void addCntrl(object sender, RoutedEventArgs e)
+        {
+            /* ucAbility t = new ucAbility();
+             Grid.SetColumn(t, 2);
+             Grid.SetRow(t, 2);
+             mainGrid.Children.Add(t);            */
+
+            mFrame.Visibility = hFrame.IsEnabled ? Visibility.Hidden : Visibility.Visible;
+            hFrame.IsEnabled = !hFrame.IsEnabled;
+        }
     }
 }
