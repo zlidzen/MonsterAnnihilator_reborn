@@ -46,6 +46,8 @@ namespace ma_game
                     case 1: sImgL = "arm_l2b.png"; sImgR = "arm_r2b.png"; break;
                     case 2: sImgL = "arm_l2r.png"; sImgR = "arm_r2r.png"; break;
                 }
+
+
                 imgArmL.Source = new BitmapImage(new Uri("Resources/" + sImgL));
                 imgArmR.Source = new BitmapImage(new Uri("Resources/" + sImgR));
             }

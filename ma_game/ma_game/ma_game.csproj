@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -152,67 +152,67 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\arm_l2.png" />
+    <Resource Include="Resources\arm_l2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\arm_l2b.png" />
+    <Resource Include="Resources\arm_l2b.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\arm_l2r.png" />
+    <Resource Include="Resources\arm_l2r.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\arm_r2.png" />
+    <Resource Include="Resources\arm_r2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\arm_r2b.png" />
+    <Resource Include="Resources\arm_r2b.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\arm_r2r.png" />
+    <Resource Include="Resources\arm_r2r.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\body_2.png" />
+    <Resource Include="Resources\body_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\body_2b.png" />
+    <Resource Include="Resources\body_2b.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\body_2r.png" />
+    <Resource Include="Resources\body_2r.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Head_2.png" />
+    <Resource Include="Resources\Head_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Head_2b.png" />
+    <Resource Include="Resources\Head_2b.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Head_2r.png" />
+    <Resource Include="Resources\Head_2r.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\l_leg_2.png" />
+    <Resource Include="Resources\l_leg_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\l_leg_2b.png" />
+    <Resource Include="Resources\l_leg_2b.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\l_leg_2r.png" />
+    <Resource Include="Resources\l_leg_2r.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\r_leg_2.png" />
+    <Resource Include="Resources\r_leg_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\r_leg_2b.png" />
+    <Resource Include="Resources\r_leg_2b.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\r_leg_2r.png" />
+    <Resource Include="Resources\r_leg_2r.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tr_2.png" />
+    <Resource Include="Resources\tr_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tr_2b.png" />
+    <Resource Include="Resources\tr_2b.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tr_2r.png" />
+    <Resource Include="Resources\tr_2r.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
