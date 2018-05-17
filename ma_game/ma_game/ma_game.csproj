@@ -179,13 +179,19 @@
     <Resource Include="Resources\body_2r.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Head_2.png" />
+    <Resource Include="Resources\Head_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Head_2b.png" />
+    <Resource Include="Resources\Head_2b.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Head_2r.png" />
+    <Resource Include="Resources\Head_2r.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\l_leg_2.png" />

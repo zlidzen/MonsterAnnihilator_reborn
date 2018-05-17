@@ -16,7 +16,7 @@
     </UserControl.Resources>
     
     <Grid Margin="0,0,0,0">
-        <Image Height="41" Margin="55,24,0,0" Name="imgHead" Width="43" Source="Resources/Head_2.png" MouseLeftButtonDown="imgHead_MouseLeftButtonDown"/>
+        <Image Height="41" Margin="55,24,0,0" Name="imgHead" Width="43" Source="Resources\Head_2.png" MouseLeftButtonDown="imgHead_MouseLeftButtonDown"/>
         <Image Height="67" Margin="49,69,0,0" Name="imgBody" Width="58" Source="Resources/body_2.png" MouseLeftButtonDown="imgBody_MouseLeftButtonDown"/>
         <Image Height="67" Margin="14,69,0,0" Name="imgArmL" Width="35" Source="Resources/arm_l2.png" MouseLeftButtonDown="imgArmL_MouseLeftButtonDown"/>
         <Image Height="67" Margin="107,69,0,0" Name="imgArmR" Width="35" Source="Resources/arm_r2.png" MouseLeftButtonDown="imgArmL_MouseLeftButtonDown"/>

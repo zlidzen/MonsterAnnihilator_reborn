@@ -48,8 +48,8 @@ namespace ma_game
                 }
 
 
-                imgArmL.Source = new BitmapImage(new Uri("Resources/" + sImgL));
-                imgArmR.Source = new BitmapImage(new Uri("Resources/" + sImgR));
+                imgArmL.Source = new BitmapImage(new Uri("Resources/" + sImgL, UriKind.Relative));
+                imgArmR.Source = new BitmapImage(new Uri("Resources/" + sImgR, UriKind.Relative));
             }
         }
 
@@ -65,8 +65,8 @@ namespace ma_game
                     case 1: sImgL = "l_leg_2b.png"; sImgR = "r_leg_2b.png"; break;
                     case 2: sImgL = "l_leg_2r.png"; sImgR = "r_leg_2r.png"; break;
                 }
-                imgLegL.Source = new BitmapImage(new Uri("Resources/" + sImgL));
-                imgLegR.Source = new BitmapImage(new Uri("Resources/" + sImgR));
+                imgLegL.Source = new BitmapImage(new Uri("Resources/" + sImgL, UriKind.Relative));
+                imgLegR.Source = new BitmapImage(new Uri("Resources/" + sImgR, UriKind.Relative));
             }
         }
 
@@ -80,8 +80,9 @@ namespace ma_game
                 {
                     case 1: sImg = "Head_2b.png"; break;
                     case 2: sImg = "Head_2r.png"; break;
-                }
-                imgHead.Source = new BitmapImage(new Uri("Resources/" + sImg));
+                }             
+                    
+                imgHead.Source = new BitmapImage(new Uri("Resources/" + sImg, UriKind.Relative));                
             }
         }
 
@@ -96,7 +97,9 @@ namespace ma_game
                     case 1: sImg = "body_2b.png"; break;
                     case 2: sImg = "body_2r.png"; break;
                 }
-                imgBody.Source = new BitmapImage(new Uri("Resources/" + sImg));
+
+                imgBody.Source = new BitmapImage(new Uri("Resources/" + sImg, UriKind.Relative));
+              
             }
         }
 
@@ -111,7 +114,7 @@ namespace ma_game
                     case 1: sImg = "tr_2b.png"; break;
                     case 2: sImg = "tr_2r.png"; break;
                 }
-                imgTr.Source = new BitmapImage(new Uri("Resources/" + sImg));
+                imgTr.Source = new BitmapImage(new Uri("Resources/" + sImg, UriKind.Relative));
             }
         }
 
@@ -126,28 +129,28 @@ namespace ma_game
         }
 
         private void imgHead_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-           // chekPointMK(iState, 1);
+        {            
+            chekPointMK(iState, 1);
         }
 
         private void imgArmL_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            //chekPointMK(iState, 2);
+            chekPointMK(iState, 2);
         }
 
         private void imgBody_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-          //  chekPointMK(iState, 3);
+            chekPointMK(iState, 3);
         }
 
         private void imgTr_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-          //  chekPointMK(iState, 4);
+            chekPointMK(iState, 4);
         }
 
         private void imgLegL_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-          //  chekPointMK(iState, 5);
+            chekPointMK(iState, 5);
         }
 
         // выбор точек атаки и защиты

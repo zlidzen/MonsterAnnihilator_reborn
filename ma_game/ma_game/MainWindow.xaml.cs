@@ -56,6 +56,17 @@ namespace ma_game
 
             mFrame.Visibility = hFrame.IsEnabled ? Visibility.Hidden : Visibility.Visible;
             hFrame.IsEnabled = !hFrame.IsEnabled;
+
+            int action = 2;
+            string strAction = "Attack";
+
+            if (dAction.iState == 2) {
+                action = 1;
+                strAction = "Prottect";
+            }
+                
+            dAction.iState = action;
+            dAction.strTitle = strAction;
         }
     }
 }
