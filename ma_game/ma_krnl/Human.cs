@@ -11,7 +11,7 @@ namespace ma_krnl
     {
         private int exp;
         private string pass;
-        private int spec;
+        private int spec; // Berserker -> 0 / Guardian -> 1.
 
         public int Sp {
             get { return spec; }

@@ -56,10 +56,10 @@ namespace ma_game
         {
             string helth = "30";
             string power = "1";
-            string resist = "1";
-            string heroImg = "Guardian.png";
+            string resist = "1";            
             string attack = "5";
             string defence = "6";
+            string heroImg = "Guardian.png";
 
             if (specialization.SelectedIndex == 0)
             {

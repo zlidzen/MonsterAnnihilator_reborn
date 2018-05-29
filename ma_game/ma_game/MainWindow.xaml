@@ -21,13 +21,13 @@
         <Menu Grid.Row="0" Grid.ColumnSpan="3" Height="22" Margin="0" VerticalAlignment="Top">
             <MenuItem Header="Game">
                 <MenuItem Header="Start" Click="MenuGameStart_Click"/>
-                <MenuItem Header="Restart" IsEnabled="False"/>
+                <MenuItem Header="Restart" Click="MenuItem_Click"/>
                 <MenuItem Header="Editor" IsEnabled="False"/>
                 <MenuItem Header="Settings" IsEnabled="False"/>
                 <MenuItem Header="Exit" Click="MenuExit_Click"/>
             </MenuItem>
             <MenuItem Header="Hero">
-                <MenuItem Header="Load" Click="MenuHeroLoad_Click"/>
+                <MenuItem Header="Load/Delete" Click="MenuHeroLoad_Click"/>
                 <MenuItem Header="Make" Click="MenuHeroMake_Click"/>
             </MenuItem>
             <MenuItem Header="Help">
@@ -45,7 +45,7 @@
         <local:ucDummy x:Name="dAction" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="270" Width="158" Margin="7,6,8,5"/>
 
         <TextBox HorizontalAlignment="Left" Margin="10,10,0,10" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" Width="322" Grid.ColumnSpan="2"/>
-        <Label Content="Buttons..." HorizontalAlignment="Left" Margin="72,30,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="99"/>
         <Button Content="Test_btn" Grid.Column="1" HorizontalAlignment="Left" Margin="89,34,0,0" Grid.Row="2" VerticalAlignment="Top" Width="74" Click="addCntrl" Height="22"/>
+        <CheckBox x:Name="chbxShowComponents" Content="Show all components..." Grid.Column="2" HorizontalAlignment="Left" Margin="85,34,0,0" Grid.Row="2" VerticalAlignment="Top" Width="144" Checked="CheckBox_Checked_Unchecked" Unchecked="CheckBox_Checked_Unchecked"/>        
     </Grid>
 </Window>

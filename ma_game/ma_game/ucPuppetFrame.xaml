@@ -31,13 +31,13 @@
         <local:ucAbility x:Name="aSecond" Margin="61,206,0,0" Style="{StaticResource ucAbility}"/>
         <local:ucAbility x:Name="aThird" Margin="111,206,0,0" Style="{StaticResource ucAbility}"/>
         <local:ucAbility x:Name="aForth" Margin="161,206,0,0" Style="{StaticResource ucAbility}"/>
-        <Label Content="Name: 12345678901234567890" Margin="10,10,0,0"/>
-        <Label Content="Spec.: Barbarian" Margin="114,40,0,0"/>
-        <Label Content="Level: 1" Margin="114,66,0,0"/>
-        <Label Content="Helth: 25" Margin="114,86,0,0"/>
-        <Label Content="Power: 100" Margin="114,106,0,0"/>
-        <Label Content="Resist: 100" Margin="114,126,0,0"/>
-        <Label Content="Attack: 0d0" Margin="114,146,0,0"/>
-        <Label Content="Defence: 0d0" Margin="114,166,0,0"/>
+        <Label x:Name="pupName" Content="Name: 12345678901234567890" Margin="10,10,0,0"/>
+        <Label x:Name="pupSpec" Content="Spec.: Barbarian" Margin="114,40,0,0"/>
+        <Label x:Name="pupLevel" Content="Level: 1" Margin="114,66,0,0"/>
+        <Label x:Name="pupHelth" Content="Helth: 25" Margin="114,86,0,0"/>
+        <Label x:Name="pupPower" Content="Power: 100" Margin="114,106,0,0"/>
+        <Label x:Name="pupResist" Content="Resist: 100" Margin="114,126,0,0"/>
+        <Label x:Name="pupAttack" Content="Attack: 0d0" Margin="114,146,0,0"/>
+        <Label x:Name="pupDefence" Content="Defence: 0d0" Margin="114,166,0,0"/>
     </Grid>
 </UserControl>

@@ -18,21 +18,19 @@ namespace ma_game
         public hLoadWND()
         {
             InitializeComponent();
+            RefreshForm();
+        }
 
-            Game.readHeroList();
-            if (Game.Heroes.Count <= 0)
+        void RefreshForm()
+        {  
+            foreach (var item in Game.Heroes)
             {
-                MessageBox.Show("You do not have any Heroes.");
-                return;
+                loadName.Items.Add(item.name);
+                pass.Add(item.Pass);
             }
-            else
-            {
-                foreach (var item in Game.Heroes)
-                {
-                    loadName.Items.Add(item.name);
-                    pass.Add(item.Pass);
-                }
-            }
+
+            loadPass.Clear();
+            loadName.SelectedIndex = -1;
         }
 
         private void Load_Click(object sender, RoutedEventArgs e)
@@ -47,12 +45,40 @@ namespace ma_game
             {
                 Game.Personage = Game.Heroes[loadName.SelectedIndex];
                 MessageBox.Show("Personage was loaded.");
+                DialogResult = true;
                 Close();
             }
             else
             {
                 MessageBox.Show("Password is wrong.");
             }            
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            if (loadName.Text.CompareTo("") == 0)
+            {
+                MessageBox.Show("Please, enter name...");
+                return;
+            }
+
+            if (loadPass.Password.CompareTo(pass[loadName.SelectedIndex]) == 0)
+            {
+                if ((Game.Personage.name.CompareTo(Game.Heroes[loadName.SelectedIndex].name) == 0) &&
+                    (Game.Personage.Pass.CompareTo(pass[loadName.SelectedIndex]) == 0))
+                {
+                    Game.Personage = null;                    
+                }
+                Game.Heroes.RemoveAt(loadName.SelectedIndex);
+                pass.RemoveAt(loadName.SelectedIndex);
+                Game.writeHeroList();
+                RefreshForm();
+                MessageBox.Show("Personage was deleted.");
+            }
+            else
+            {
+                MessageBox.Show("Password is wrong.");
+            }   
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

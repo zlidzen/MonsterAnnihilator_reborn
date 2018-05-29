@@ -24,15 +24,30 @@ namespace ma_game
     {
         public StartWindow()
         {
-            InitializeComponent();   
-        
+            InitializeComponent();
+            Game.readHeroList();  
+      
+            // will change in future
+            hFrame.Visibility = Visibility.Hidden;
+            mFrame.Visibility = Visibility.Hidden;
+            dAction.Visibility = Visibility.Hidden;
         }
 
         private void MenuHeroLoad_Click(object sender, RoutedEventArgs e)
         {
+            if (Game.Heroes.Count <= 0)
+            {
+                MessageBox.Show("You do not have any Heroes.");
+                return;
+            }
+
             hLoadWND hlwnd = new hLoadWND();
             hlwnd.Owner = this;
-            hlwnd.ShowDialog();
+
+            if (hlwnd.ShowDialog().Value || (Game.Personage == null))
+            {
+                hFrame.updateData(Game.Personage);
+            }
         }
 
         private void MenuHeroMake_Click(object sender, RoutedEventArgs e)
@@ -92,6 +107,19 @@ namespace ma_game
             {
                 Console.WriteLine(notImp.Message);
             }            
+        }
+
+        private void CheckBox_Checked_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Visibility param = chbxShowComponents.IsChecked.Value ? Visibility.Visible : Visibility.Hidden;
+            hFrame.Visibility = param;
+            mFrame.Visibility = param;
+            dAction.Visibility = param;
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            hFrame.updateData(null);
         }
     }
 }
