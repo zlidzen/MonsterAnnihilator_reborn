@@ -5,15 +5,81 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ma_krnl;
+using System.Runtime.Serialization.Formatters.Binary;
+
 
 namespace ma_game
 {
     class Game
     {
-        public static Human getStartPerson(int sp)
+        public static Human Personage;
+        public static Human Monster;
+        public static List<Human> Heroes = new List<Human>();
+        public static List<Human> Monsters = new List<Human>();
+        
+        enum gameState : byte { finished, started };
+        enum actionPosition : byte { protect = 1, attack = 2 };
+
+        public static void setStart()
         {
-            if (sp == 0) return new Human("", 1, 25, 3, 2, 1, new Dice(), 1, new Dice(1, 5), 0, "", 0);
-            else return new Human("", 1, 30, 2, 3, 1, new Dice(1, 5), 1, new Dice(), 0, "", 1);
+            throw new NotImplementedException();
+        }
+
+        public static bool readHeroList()
+        {
+            BinaryFormatter binFormat = new BinaryFormatter();
+            try
+            {
+                if (File.Exists("her.dat"))
+                {
+                    using (Stream fStream = new FileStream("her.dat", FileMode.Open, FileAccess.Read, FileShare.None))
+                    {
+                        Human r = (Human)binFormat.Deserialize(fStream);
+                        Heroes.Add(r);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;             
+            }
+            return true;
+        }
+
+        public static bool writeNewHero(Human newHero)
+        {          
+            BinaryFormatter binFormat = new BinaryFormatter();
+            try
+            {
+                using (Stream fStream = new FileStream("her.dat", FileMode.Append, FileAccess.Write, FileShare.None))
+                {
+                    binFormat.Serialize(fStream, newHero);
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;              
+            }
+            return true;
+        }
+
+        public static bool makeNewPersonage(int spec, string Name, string pass)
+        {
+            Personage = (spec == 0) ? new Human(Name, 1, 30, 2, 0, 1, new Dice(), 1, new Dice(1, 5), "Berserker.png", 0, pass, 0) :
+                                    new Human(Name, 1, 25, 1, 1, 1, new Dice(1, 5), 1, new Dice(), "Guardian.png", 0, pass, 0);
+            bool res = (Personage != null);
+
+            if (res)
+            {
+                res = writeNewHero(Personage);
+            }
+            return res; 
+        }
+
+        public static Human setStartPersonage(int sp)
+        {
+            if (sp == 0) return new Human("", 1, 25, 3, 2, 1, new Dice(), 1, new Dice(1, 5),"", 0, "", 0);
+            else return new Human("", 1, 30, 2, 3, 1, new Dice(1, 5), 1, new Dice(), "", 0, "", 1);
         }
         
         // t*xdn
@@ -100,7 +166,7 @@ class MyStream
                 sw.WriteLine(h.name);
                 sw.Close();
             }            
-            catch (Exception e) { return false; }
+            catch { return false; }
             return true;
         }
 
@@ -129,7 +195,7 @@ class MyStream
             Dice ad = new Dice(aDice);
             Human lh = new Human(name, lvl, helsh, power,
                                  resist, aThrow, ad,
-                                dThrow, dd, exp, pass, sp);
+                                dThrow, dd, "", exp, pass, sp);
         }
 
     }

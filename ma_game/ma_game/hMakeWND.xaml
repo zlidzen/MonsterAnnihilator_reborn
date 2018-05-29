@@ -5,28 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ma_game"
         mc:Ignorable="d"
-        Title="Hero: make new" Height="343.714" Width="308.571" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" WindowStyle="ToolWindow">
-    <WrapPanel Margin="0,0,0,8">
-        <Label Content="Enter name of hero:" Margin="8,6,0,0"/>
-        <TextBox x:Name="makeName" Height="23" TextWrapping="Wrap" Text="" Width="120" Margin="44,6,0,0"/>
-        <Label Content="Pick specialization to hero:" Margin="8,6,0,0"/>
-        <ComboBox Width="120" Height="23" Margin="8,6,0,0" SelectedIndex="1">
-            <ListBoxItem Content="Barbarian"/>
-            <ListBoxItem Content="Knight"/>
-        </ComboBox>
-        <Label Content="Enter password:" Margin="8,6,0,0"/>
-        <PasswordBox x:Name="makePass" Width="120" Height="23" Margin="64,6,0,0"/>
-        <GroupBox Header="Characteristics:" Height="169" Width="279" Margin="8,6,0,0">
-            <WrapPanel>
-                <Label Content="Level: 1" Margin="8,4,0,0"/>
-                <Label Content="Helth: 25" Margin="108,4,10,0"/>
-                <Label Content="Power: 0" Margin="8,0,0,0"/>
-                <Label Content="Resist: 0" Margin="102,0,10,0"/>
-                <Label Content="Attack: 0d0" Margin="8,0,0,0"/>
-                <Label Content="Defence: 0d0" Margin="88,0,10,0"/>
+        Title="Hero: make new" Height="334" Width="270" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" WindowStyle="ToolWindow">
+    <WrapPanel Margin="0,0,0,0">
+        <Label Content="Enter name:" Margin="8,6,0,0"/>
+        <TextBox x:Name="makeName" Height="23" TextWrapping="Wrap" Text="" Width="120" Margin="41,6,0,0"/>
+        <Label Content="Pic specialization:" Margin="8,6,0,0"/>
+        <ComboBox x:Name="specialization" Width="120" Height="23" Margin="12,6,0,0" SelectionChanged="ComboBox_SelectionChanged">
+            <ListBoxItem Content="Berserker"/>
+            <ListBoxItem Content="Guardian"/>
+        </ComboBox>        
+        <GroupBox Header="Characteristics:" Height="165" Width="234" Margin="8,6,0,0">
+            <WrapPanel Margin="0,0,-2,0" Orientation="Vertical">
+                <Image x:Name="imgHero" Height="100" Width="100" Margin="8,4,0,30"/>
+                <Label Content="Level: 1" Height="23" Margin="8,0,0,0"/>
+                <Label x:Name="hHelth" Content="Helth: 25" Height="23" Margin="8,0,0,0"/>
+                <Label x:Name="hPower" Content="Power: 1" Height="23" Margin="8,0,0,0"/>
+                <Label x:Name="hResist" Content="Resist: 1" Height="23" Margin="8,0,0,0"/>
+                <Label x:Name="hAttack" Content="Attack: 1d6" Height="23" Margin="8,0,0,0"/>
+                <Label x:Name="hDefence" Content="Defence: 1d5" Height="23" Margin="8,2,0,2"/>                
             </WrapPanel>
         </GroupBox>
-        <Button Content="Back" Width="75" Margin="124,6,4,0" Click="Back_Click"/>
+        <Label Content="Enter password:" Margin="8,6,0,0"/>
+        <PasswordBox x:Name="makePass" Width="120" Height="23" Margin="20,6,0,0"/>
+        <Button Content="Cancel" Width="75" Margin="84,6,4,0" Click="Back_Click"/>
         <Button Content="Make" Width="75" Margin="4,6,0,0" Click="Make_Click"/>
     </WrapPanel>
 </Window>

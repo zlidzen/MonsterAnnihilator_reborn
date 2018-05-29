@@ -5,12 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace ma_game
 {
@@ -19,9 +14,25 @@ namespace ma_game
     /// </summary>
     public partial class hLoadWND : Window
     {
+        List<string> pass = new List<string> ();
         public hLoadWND()
         {
             InitializeComponent();
+
+            Game.readHeroList();
+            if (Game.Heroes.Count <= 0)
+            {
+                MessageBox.Show("You do not have any Heroes.");
+                return;
+            }
+            else
+            {
+                foreach (var item in Game.Heroes)
+                {
+                    loadName.Items.Add(item.name);
+                    pass.Add(item.Pass);
+                }
+            }
         }
 
         private void Load_Click(object sender, RoutedEventArgs e)
@@ -29,13 +40,19 @@ namespace ma_game
             if (loadName.Text.CompareTo("") == 0)
             {
                 MessageBox.Show("Please, enter name...");
+                return;
             }
-
-            if (loadPass.Password.CompareTo("") == 0)
+           
+            if (loadPass.Password.CompareTo(pass[loadName.SelectedIndex]) == 0)
             {
-                MessageBox.Show("Please, enter password...");
+                Game.Personage = Game.Heroes[loadName.SelectedIndex];
+                MessageBox.Show("Personage was loaded.");
+                Close();
             }
-            MessageBox.Show("Loading...");
+            else
+            {
+                MessageBox.Show("Password is wrong.");
+            }            
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ma_krnl
 {
+    [Serializable]
     public class Human : Puppet
     {
         private int exp;
@@ -29,10 +30,10 @@ namespace ma_krnl
 
         public Human(string name, int lvl, int helsh, int power,
                      int resist, int attackThrow, Dice attackDice,
-                     int defenceThrow, Dice defenceDice, int exp, 
+                     int defenceThrow, Dice defenceDice, string pathToPic, int exp, 
                      string pass, int spec)
             : base(name, lvl, helsh, power, resist, attackThrow,
-                  attackDice, defenceThrow, defenceDice)
+                  attackDice, defenceThrow, defenceDice, pathToPic)
         {
             Exp = exp;
             Pass = pass;

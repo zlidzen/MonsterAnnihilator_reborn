@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ma_krnl
 {
+    [Serializable]
     public class Dice
     {
         // xdn

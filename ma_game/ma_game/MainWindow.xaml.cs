@@ -24,7 +24,8 @@ namespace ma_game
     {
         public StartWindow()
         {
-            InitializeComponent();           
+            InitializeComponent();   
+        
         }
 
         private void MenuHeroLoad_Click(object sender, RoutedEventArgs e)
@@ -67,6 +68,30 @@ namespace ma_game
                 
             dAction.iState = action;
             dAction.strTitle = strAction;
+        }
+
+        private void MenuGameStart_Click(object sender, RoutedEventArgs e)
+        {
+            if (Game.Personage == null)
+            {
+                MessageBox.Show("Please make or load Hero before start game.");
+                return;
+            }
+
+            if (Game.Monster == null)
+            {
+                MessageBox.Show("Please load any Monster before start game.");
+                return;
+            }
+
+            try
+            {
+                Game.setStart();
+            }
+            catch (NotImplementedException notImp)
+            {
+                Console.WriteLine(notImp.Message);
+            }            
         }
     }
 }

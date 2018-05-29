@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ma_krnl
 {
+    [Serializable]
     public abstract class Puppet
     {
         public string name;
@@ -17,6 +18,7 @@ namespace ma_krnl
         public Dice attackDice;
         private int defenceThrow;
         public Dice defenceDice;
+        private string picture;
 
         public int Lvl {
             get { return lvl; }
@@ -56,7 +58,13 @@ namespace ma_krnl
             set { defenceThrow = value < 0 ? 0 : value; }
         }
 
-        public Puppet(string name, int lvl, int helsh, int power, int resist, int attackThrow, Dice attackDice, int defenceThrow, Dice defenceDice) {
+        public string Pic
+        {
+            get { return picture; }
+            set { picture = value; }
+        }
+
+        public Puppet(string name, int lvl, int helsh, int power, int resist, int attackThrow, Dice attackDice, int defenceThrow, Dice defenceDice, string pathToPic = "") {
             this.name = name;
             Lvl = lvl;
             Helsh = helsh;
@@ -65,8 +73,10 @@ namespace ma_krnl
             aThrow = attackThrow;
             this.attackDice = attackDice;
             dThrow = defenceThrow;
-            this.defenceDice = defenceDice;            
-        }
+            this.defenceDice = defenceDice;
+            Pic = pathToPic;
+        }      
+
 
         /*private List<string> ToStringList() {
             List<string> res = new List<string>();
