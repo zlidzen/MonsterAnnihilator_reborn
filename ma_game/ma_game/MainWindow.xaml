@@ -31,7 +31,7 @@
                 <MenuItem Header="Make" Click="MenuHeroMake_Click"/>
             </MenuItem>
             <MenuItem Header="Help">
-                <MenuItem Header="WTF1?" IsEnabled="False"/>
+                <MenuItem Header="WTF?" Click="MenuItem_Help_Click"/>
                 <MenuItem Header="About us" IsEnabled="False"/>
             </MenuItem>
         </Menu>

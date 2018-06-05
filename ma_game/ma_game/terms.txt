@@ -1,0 +1,29 @@
+Rules of the Game!
+For the start game you should pick menu "Game/Start".
+
+You will do action by turns with PC.
+Who will start is picked randomly.
+
+Action is "Attack" or "Defence".
+When you Attack you may pick only ONE part of body as target (Head or Arms or Legs etc.).
+When you Defence you may pick TWO parts of body for example Head and Arms.
+
+Damage and Protect volumes are calculating by following scheme: nDx + P - Damage, nDx + R - Resist.
+nDx – it is dice: n - throws count, x – max value on dice (1D6 – usual dice with 6 sides).
+P - power, R - resist.
+Example: 
+Yours Attack = 2d4 and Power = 3, then minimal damage value (d.v.) will be:
+(2*1) + 3 = 5
+Max d.v.:
+(2*4) + 3 = 11.
+Protect value (p.v.) is calculating as d.v.
+
+When we have attack to not protected part of body, d.v. will be fully counted. 
+When we have attack to protected part of body, p.v. will be substracted from d.v.
+Example:
+There is your turn. You are attacking to Monsters Head on 12 d.v.
+Monster is protecting his Head and Arms on 7 p.v.
+There is demage which you will make: 12 - 7 = 5 d.v.
+
+You will get experience after each killed monster. You get more experience if you kill higt-level monster.
+When you get next level, caracteristics yuor personage will grown.

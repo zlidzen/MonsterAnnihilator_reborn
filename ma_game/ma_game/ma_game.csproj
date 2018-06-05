@@ -224,5 +224,10 @@
     <Resource Include="Resources\Berserker.png" />
     <Resource Include="Resources\Guardian.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="terms.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

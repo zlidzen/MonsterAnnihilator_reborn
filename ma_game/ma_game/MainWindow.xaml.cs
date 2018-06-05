@@ -121,5 +121,22 @@ namespace ma_game
         {
             hFrame.updateData(null);
         }
+
+        private void MenuItem_Help_Click(object sender, RoutedEventArgs e)
+        {
+            string Content = "";
+            try
+            {
+                using (StreamReader fStream = new StreamReader("terms.txt"))
+                {
+                    Content = fStream.ReadToEnd();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            MessageBox.Show(Content, "Help", MessageBoxButton.OK);
+        }
     }
 }
